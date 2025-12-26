@@ -54,7 +54,8 @@
   --card-foreground: oklch(0.2 0.05 135);
   --popover: oklch(0.98 0.01 135);
   --popover-foreground: oklch(0.2 0.05 135);
-  --primary: oklch(0.7 0.15 135); /* Pista Green */
+  --primary: oklch(0.7 0.15 135);
+  /* Pista Green */
   --primary-foreground: oklch(0.98 0.01 135);
   --secondary: oklch(0.92 0.06 135);
   --secondary-foreground: oklch(0.2 0.05 135);
@@ -88,7 +89,8 @@
   --card-foreground: oklch(0.95 0.02 135);
   --popover: oklch(0.18 0.05 135);
   --popover-foreground: oklch(0.95 0.02 135);
-  --primary: oklch(0.75 0.15 135); /* Brighter Pista Green for Dark Mode */
+  --primary: oklch(0.75 0.15 135);
+  /* Brighter Pista Green for Dark Mode */
   --primary-foreground: oklch(0.15 0.05 135);
   --secondary: oklch(0.25 0.08 135);
   --secondary-foreground: oklch(0.95 0.02 135);
@@ -119,7 +121,18 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+}
+
+@layer utilities {
+  .container-premium {
+    @apply w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20;
   }
 }

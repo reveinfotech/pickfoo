@@ -3,8 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, MapPin, Zap, ShieldCheck } from "lucide-react";
 
@@ -24,13 +22,12 @@ const stagger = {
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar />
-
+    <>
       <main className="flex-grow pt-20">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 to-transparent py-20 lg:py-32">
-          <div className="container mx-auto px-4">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 to-transparent py-10">
+          <div className="container-premium">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
                 initial="initial"
@@ -40,21 +37,21 @@ export default function Home() {
                 className="space-y-8"
               >
                 <motion.div variants={fadeIn} className="inline-block px-4 py-1.5 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-bold uppercase tracking-wider">
-                  Coming Soon to Wayanad
+                  Wayanad's Eats
                 </motion.div>
                 <motion.h1 variants={fadeIn} className="text-5xl lg:text-7xl font-bold font-outfit leading-[1.1] text-foreground">
-                  The Flavors of <span className="text-primary italic">Wayanad</span>, Delivered <span className="underline decoration-primary/30">Fast</span>.
+                  Satisfy Your <span className="text-primary italic">Cravings</span>, Delivered <span className="underline decoration-primary/30">Fast</span>.
                 </motion.h1>
                 <motion.p variants={fadeIn} className="text-xl text-muted-foreground leading-relaxed max-w-xl">
-                  Bringing the natural beauty of Wayanad's local cuisine right to your doorstep. Experience the fastest delivery service tailored for the heart of the hills.
+                  Juicy burgers, crispy fried chicken, or authentic Wayanad specials. Whether you need a quick bite or a traditional feast, we pick it up for you.
                 </motion.p>
                 <motion.div variants={fadeIn} className="flex flex-wrap gap-4 pt-4">
                   <Button size="lg" className="rounded-full h-14 px-8 text-lg font-bold group">
-                    Pre-register Now
+                    Order Now
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                   <Button size="lg" variant="outline" className="rounded-full h-14 px-8 text-lg font-bold border-2">
-                    Our Features
+                    View Menu
                   </Button>
                 </motion.div>
                 <motion.div variants={fadeIn} className="flex items-center space-x-6 pt-6">
@@ -66,8 +63,8 @@ export default function Home() {
                     ))}
                   </div>
                   <div className="text-sm">
-                    <p className="font-bold text-foreground">500+ Early Signups</p>
-                    <p className="text-muted-foreground">Join the pickfoo waitlist today</p>
+                    <p className="font-bold text-foreground">500+ Happy Eaters</p>
+                    <p className="text-muted-foreground">Satisfying hunger across the hills</p>
                   </div>
                 </motion.div>
               </motion.div>
@@ -81,14 +78,14 @@ export default function Home() {
               >
                 <div className="relative aspect-square md:aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl shadow-primary/20">
                   <Image
-                    src="/images/hero.png"
-                    alt="Delicious Wayanad Cuisine"
+                    src="/images/hero-fastfood.png"
+                    alt="Delicious Fast Food Spread"
                     fill
                     className="object-cover"
                     priority
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-tr from-black/40 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-tr from-black/20 to-transparent"></div>
 
                   {/* Floating Elements */}
                   <motion.div
@@ -114,7 +111,7 @@ export default function Home() {
                       <MapPin className="w-6 h-6" />
                     </div>
                     <div>
-                      <p className="text-[10px] uppercase font-bold text-muted-foreground">Delivery Area</p>
+                      <p className="text-[10px] uppercase font-bold text-muted-foreground">Served Hot In</p>
                       <p className="font-bold text-black text-sm">Wayanad Hills</p>
                     </div>
                   </motion.div>
@@ -126,11 +123,11 @@ export default function Home() {
 
         {/* Problems & Solutions (Quick Highlight) */}
         <section className="py-24 bg-white">
-          <div className="container mx-auto px-4">
+          <div className="container-premium">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-4xl font-bold font-outfit mb-6">Why Wayanad Needs <span className="text-primary italic">pickfoo?</span></h2>
+              <h2 className="text-4xl font-bold font-outfit mb-6">Why Wayanad Loves <span className="text-primary italic">pickfoo?</span></h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Traditional delivery apps struggle with the unique geography of Wayanad. We've built pickfoo specifically for our hills.
+                We understand your cravings. From late-night burgers to authentic lunchtime meals, we deliver happiness across the hills.
               </p>
             </div>
 
@@ -139,17 +136,17 @@ export default function Home() {
                 {
                   icon: <Clock className="w-8 h-8" />,
                   title: "No More Waiting",
-                  desc: "While others take hours, we use localized hubs and optimized hill-routes to deliver in minutes."
-                },
-                {
-                  icon: <ShieldCheck className="w-8 h-8" />,
-                  title: "Strictly Organic",
-                  desc: "We prioritize restaurants that use locally-sourced, organic ingredients from Wayanad farms."
+                  desc: "Hungry? We get it. Our optimized delivery network ensures your food arrives hot & crispy, faster than ever."
                 },
                 {
                   icon: <Zap className="w-8 h-8" />,
-                  title: "Hyper-Local Reach",
-                  desc: "From Kalpetta to the remotest corners, our riders know every shortcut in the valley."
+                  title: "Hot & Fresh",
+                  desc: "We prioritize speed and packaging so your fries stay crispy and your curry stays hot, all the way to your door."
+                },
+                {
+                  icon: <ShieldCheck className="w-8 h-8" />,
+                  title: "Local & Global",
+                  desc: "Craving a bucket of fried chicken? Or traditional Bamboo Rice? We connect you to the best of both worlds."
                 }
               ].map((item, index) => (
                 <motion.div
@@ -173,9 +170,9 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Freshness Section */}
+        {/* Variety Section */}
         <section className="py-24 bg-secondary/20">
-          <div className="container mx-auto px-4">
+          <div className="container-premium">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -186,7 +183,7 @@ export default function Home() {
                 <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl">
                   <Image
                     src="/images/fresh.png"
-                    alt="Fresh Wayanad Produce"
+                    alt="Food Variety in Wayanad"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
@@ -202,19 +199,19 @@ export default function Home() {
                 className="space-y-8 order-1 lg:order-2"
               >
                 <div className="inline-block px-4 py-1.5 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-bold uppercase tracking-wider">
-                  Farm to Fork
+                  Best of Both Worlds
                 </div>
                 <h2 className="text-4xl lg:text-5xl font-bold font-outfit leading-tight">
-                  Freshness Guaranteed, from the <span className="text-primary italic">Deep Woods</span>.
+                  Modern Cravings & <span className="text-primary italic">Traditional Roots</span>.
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  We partner directly with organic farmers in Wayanad to ensure that the ingredients used in your food are as fresh as the morning mist. No cold storage, no old stock—just pure, local goodness.
+                  Wayanad is changing, and so is our appetite. Whether you're a local craving a cheesy pizza or a tourist looking to taste the authentic spices of the hills, pickfoo delivers it all.
                 </p>
                 <ul className="space-y-4">
                   {[
-                    "Daily sourced ingredients from local farms",
-                    "Eco-friendly, biodegradable packaging",
-                    "Support for Wayanad's local agrarian economy"
+                    "Top-rated fast food joints & cafes",
+                    "Authentic traditional kitchens for tourists",
+                    "Contact-less, hygienic delivery"
                   ].map((item, i) => (
                     <li key={i} className="flex items-center space-x-3">
                       <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary">
@@ -225,7 +222,7 @@ export default function Home() {
                   ))}
                 </ul>
                 <Button variant="outline" size="lg" className="rounded-full px-8 border-2 group">
-                  Learn about our Sourcing
+                  Explore Our Menu
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </motion.div>
@@ -236,7 +233,7 @@ export default function Home() {
         {/* Join the Force Section */}
         <section className="py-24 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 translate-x-1/2"></div>
-          <div className="container mx-auto px-4 relative z-10">
+          <div className="container-premium relative z-10">
             <div className="p-8 lg:p-16 bg-foreground rounded-[3rem] text-white overflow-hidden relative">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="space-y-8">
@@ -280,7 +277,6 @@ export default function Home() {
         </section>
       </main>
 
-      <Footer />
-    </div>
+    </>
   );
 }

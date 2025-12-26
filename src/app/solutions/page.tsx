@@ -1,8 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { BarChart3, Rocket, HeartHandshake, ShieldCheck, ArrowRight, Zap } from "lucide-react";
 
@@ -31,11 +29,10 @@ const solutions = [
 
 export default function SolutionsPage() {
     return (
-        <div className="flex flex-col min-h-screen">
-            <Navbar />
+        <>
 
             <main className="flex-grow pt-32 pb-20">
-                <div className="container mx-auto px-4">
+                <div className="container-premium">
                     <div className="max-w-4xl mx-auto text-center mb-24">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -129,7 +126,6 @@ export default function SolutionsPage() {
                 </div>
             </main>
 
-            <Footer />
-        </div>
+        </>
     );
 }

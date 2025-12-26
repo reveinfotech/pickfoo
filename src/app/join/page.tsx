@@ -1,18 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Store, Bike, CheckCircle2, ArrowRight } from "lucide-react";
 
 export default function JoinPage() {
     return (
-        <div className="flex flex-col min-h-screen">
-            <Navbar />
+        <>
 
             <main className="flex-grow pt-32 pb-20">
-                <div className="container mx-auto px-4">
+                <div className="container-premium">
                     <div className="text-center max-w-3xl mx-auto mb-20">
                         <motion.h1
                             initial={{ opacity: 0, scale: 0.9 }}
@@ -126,7 +123,6 @@ export default function JoinPage() {
                 </div>
             </main>
 
-            <Footer />
-        </div>
+        </>
     );
 }

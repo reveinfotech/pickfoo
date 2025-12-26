@@ -2,9 +2,10 @@
 
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ShoppingBag } from "lucide-react";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
@@ -20,17 +21,38 @@ const navItems = [
 export function Navbar() {
     const [isOpen, setIsOpen] = React.useState(false);
     const pathname = usePathname();
+    const { scrollY } = useScroll();
+    const [visible, setVisible] = React.useState(true);
+
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        const previous = scrollY.getPrevious() || 0;
+        if (latest > previous && latest > 150) {
+            setVisible(false);
+        } else {
+            setVisible(true);
+        }
+    });
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/10">
-            <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-                <Link href="/" className="flex items-center space-x-2">
-                    <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
-                        <ShoppingBag className="text-primary-foreground w-6 h-6" />
-                    </div>
-                    <span className="text-2xl font-bold font-outfit tracking-tight text-foreground">
-                        pick<span className="text-primary">foo</span>
-                    </span>
+        <motion.header
+            variants={{
+                visible: { y: 0 },
+                hidden: { y: "-100%" },
+            }}
+            animate={visible ? "visible" : "hidden"}
+            transition={{ duration: 0.35, ease: "easeInOut" }}
+            className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/10"
+        >
+            <div className="container-premium h-20 flex items-center justify-between">
+                <Link href="/" className="flex items-center">
+                    <Image
+                        src="/logo.png"
+                        alt="pickfoo"
+                        width={140}
+                        height={40}
+                        className="h-10 w-auto object-contain"
+                        priority
+                    />
                 </Link>
 
                 {/* Desktop Navigation */}
@@ -83,6 +105,6 @@ export function Navbar() {
                     </Sheet>
                 </div>
             </div>
-        </header>
+        </motion.header>
     );
 }
