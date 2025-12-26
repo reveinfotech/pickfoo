@@ -40,7 +40,7 @@ export default function WayanadPage() {
                             initial={{ scale: 1.1 }}
                             animate={{ scale: 1 }}
                             transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
-                            className="w-full h-full bg-[url('https://images.unsplash.com/photo-1549416878-b9ca35c24150?q=80&w=2000')] bg-cover bg-center"
+                            className="w-full h-full bg-[url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=2000')] bg-cover bg-center"
                         ></motion.div>
                     </div>
 
@@ -105,7 +105,7 @@ export default function WayanadPage() {
                             >
                                 <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent z-10"></div>
                                 <Image
-                                    src="https://images.unsplash.com/photo-1593005510509-d95b268ff990?q=80&w=800"
+                                    src="https://images.unsplash.com/photo-1509358271058-acd22cc93898?q=80&w=800"
                                     alt="Wayanad Spices"
                                     fill
                                     className="object-cover"
@@ -126,10 +126,10 @@ export default function WayanadPage() {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                             {[
-                                { name: "Malabar Biriyani", img: "https://placehold.co/600x800/1a1a1a/ffffff?text=Malabar+Biriyani" },
-                                { name: "Traditional Puttu", img: "https://placehold.co/600x800/1a1a1a/ffffff?text=Traditional+Puttu" },
-                                { name: "Bamboo Rice Payasam", img: "https://placehold.co/600x800/1a1a1a/ffffff?text=Bamboo+Rice" },
-                                { name: "Wayanad Coffee", img: "https://placehold.co/600x800/1a1a1a/ffffff?text=Wayanad+Coffee" }
+                                { name: "Malabar Biriyani", img: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=600" },
+                                { name: "Traditional Puttu", img: "https://images.unsplash.com/photo-1630383249896-424e482df921?q=80&w=600" },
+                                { name: "Bamboo Rice Payasam", img: "https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?q=80&w=600" },
+                                { name: "Wayanad Coffee", img: "https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=600" }
                             ].map((food, i) => (
                                 <motion.div
                                     key={i}

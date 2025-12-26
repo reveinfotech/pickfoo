@@ -99,7 +99,7 @@ export default function JoinPage() {
                                 ))}
                             </ul>
 
-                            <Button variant="outline" size="lg" className="w-full h-16 rounded-2xl text-lg font-bold border-white/20 text-white hover:bg-white hover:text-black group">
+                            <Button variant="outline" size="lg" className="w-full h-16 rounded-2xl text-lg font-bold bg-transparent border-white/20 text-white hover:bg-white hover:text-black group">
                                 Apply to Deliver
                                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </Button>

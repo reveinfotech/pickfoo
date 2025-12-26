@@ -96,7 +96,7 @@ export default function SolutionsPage() {
                                     <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full h-14 px-8 font-bold">
                                         Get Started Now
                                     </Button>
-                                    <Button variant="outline" className="text-white border-white/20 hover:bg-white/10 rounded-full h-14 px-8 font-bold">
+                                    <Button variant="outline" className="text-primary border-white/20 hover:bg-white/10 rounded-full h-14 px-8 font-bold">
                                         View Demo Dashboard
                                     </Button>
                                 </div>

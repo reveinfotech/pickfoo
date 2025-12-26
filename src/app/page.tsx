@@ -248,7 +248,7 @@ export default function Home() {
                     <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full h-14 px-8 text-lg font-bold">
                       Become a Partner
                     </Button>
-                    <Button variant="outline" className="text-white border-white/20 hover:bg-white/10 rounded-full h-14 px-8 text-lg font-bold">
+                    <Button variant="outline" className="bg-transparent text-white border-white/20 hover:bg-white/10 rounded-full h-14 px-8 text-lg font-bold">
                       Delivery Fleet
                     </Button>
                   </div>

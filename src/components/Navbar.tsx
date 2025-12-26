@@ -50,7 +50,7 @@ export function Navbar() {
                         alt="pickfoo"
                         width={140}
                         height={40}
-                        className="h-10 w-auto object-contain"
+                        className="h-6 w-auto object-contain"
                         priority
                     />
                 </Link>
@@ -78,29 +78,53 @@ export function Navbar() {
                 <div className="md:hidden flex items-center">
                     <Sheet open={isOpen} onOpenChange={setIsOpen}>
                         <SheetTrigger asChild>
-                            <Button variant="ghost" size="icon">
-                                <Menu className="w-6 h-6" />
+                            <Button variant="ghost" size="icon" className="relative z-50">
+                                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                             </Button>
                         </SheetTrigger>
-                        <SheetContent side="right" className="bg-background">
-                            <nav className="flex flex-col space-y-4 mt-8">
-                                {navItems.map((item) => (
-                                    <Link
-                                        key={item.href}
-                                        href={item.href}
-                                        onClick={() => setIsOpen(false)}
-                                        className={cn(
-                                            "text-xl font-medium",
-                                            pathname === item.href ? "text-primary" : "text-muted-foreground"
-                                        )}
+                        <SheetContent side="top" className="w-full h-[100dvh] bg-background/95 backdrop-blur-3xl border-none p-0">
+                            <div className="flex flex-col items-center justify-center h-full px-6 relative overflow-hidden">
+                                {/* Decorative Background Elements */}
+                                <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+                                <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2"></div>
+
+                                <nav className="flex flex-col space-y-6 w-full max-w-sm relative z-10 text-center">
+                                    {navItems.map((item, i) => (
+                                        <motion.div
+                                            key={item.href}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ delay: 0.1 + i * 0.1 }}
+                                        >
+                                            <Link
+                                                href={item.href}
+                                                onClick={() => setIsOpen(false)}
+                                                className={cn(
+                                                    "text-4xl font-bold font-outfit transition-all hover:text-primary hover:scale-105 inline-block",
+                                                    pathname === item.href ? "text-primary" : "text-foreground"
+                                                )}
+                                            >
+                                                {item.name}
+                                            </Link>
+                                        </motion.div>
+                                    ))}
+
+                                    <motion.div
+                                        initial={{ opacity: 0, scale: 0.9 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        transition={{ delay: 0.4 }}
+                                        className="pt-8"
                                     >
-                                        {item.name}
-                                    </Link>
-                                ))}
-                                <Button className="w-full mt-4 font-semibold rounded-xl">
-                                    Download App
-                                </Button>
-                            </nav>
+                                        <Button className="w-full h-14 text-lg font-bold rounded-full shadow-lg hover:shadow-primary/25 hover:scale-105 transition-all">
+                                            Download App
+                                        </Button>
+                                    </motion.div>
+                                </nav>
+
+                                <div className="absolute bottom-10 left-0 right-0 text-center text-muted-foreground text-sm">
+                                    <p>© {new Date().getFullYear()} pickfoo.</p>
+                                </div>
+                            </div>
                         </SheetContent>
                     </Sheet>
                 </div>
