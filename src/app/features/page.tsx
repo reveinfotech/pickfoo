@@ -56,62 +56,61 @@ export default function FeaturesPage() {
     return (
         <>
 
-            <main className="flex-grow pt-32 pb-20">
-                <div className="container-premium">
-                    <div className="max-w-3xl mb-16">
+            <main className="flex-grow pt-32 md:pb-20">
+                <div className="max-w-3xl mb-16 container-premium">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="inline-block px-4 py-1.5 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-bold uppercase tracking-wider mb-6"
+                    >
+                        Technology meets Tradition
+                    </motion.div>
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 }}
+                        className="text-5xl lg:text-6xl font-bold font-outfit mb-6"
+                    >
+                        Building the Future of <span className="text-primary italic">Hill Delivery</span>.
+                    </motion.h1>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2 }}
+                        className="text-xl text-muted-foreground leading-relaxed"
+                    >
+                        Discover how pickfoo is transforming the culinary landscape of Wayanad with cutting-edge technology and a deep love for local flavors.
+                    </motion.p>
+                </div>
+
+                <div className="grid grid-cols-1 container-premium md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {features.map((feature, index) => (
                         <motion.div
+                            key={index}
                             initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            className="inline-block px-4 py-1.5 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-bold uppercase tracking-wider mb-6"
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: index * 0.1 }}
+                            className="p-8 rounded-[2.5rem] bg-white border border-primary/5 hover:border-primary/20 transition-all hover:shadow-2xl hover:-translate-y-2 group"
                         >
-                            Technology meets Tradition
+                            <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 ${feature.color} group-hover:scale-110 transition-transform`}>
+                                {feature.icon}
+                            </div>
+                            <h3 className="text-2xl font-bold font-outfit mb-4 group-hover:text-primary transition-colors">{feature.title}</h3>
+                            <p className="text-muted-foreground leading-relaxed">
+                                {feature.description}
+                            </p>
+                            <div className="mt-8 flex items-center text-primary font-bold opacity-0 group-hover:opacity-100 transition-opacity">
+                                Learn more <ChevronRight className="ml-2 w-4 h-4" />
+                            </div>
                         </motion.div>
-                        <motion.h1
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.1 }}
-                            className="text-5xl lg:text-6xl font-bold font-outfit mb-6"
-                        >
-                            Building the Future of <span className="text-primary italic">Hill Delivery</span>.
-                        </motion.h1>
-                        <motion.p
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.2 }}
-                            className="text-xl text-muted-foreground leading-relaxed"
-                        >
-                            Discover how pickfoo is transforming the culinary landscape of Wayanad with cutting-edge technology and a deep love for local flavors.
-                        </motion.p>
-                    </div>
+                    ))}
+                </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {features.map((feature, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1 }}
-                                className="p-8 rounded-[2.5rem] bg-white border border-primary/5 hover:border-primary/20 transition-all hover:shadow-2xl hover:-translate-y-2 group"
-                            >
-                                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 ${feature.color} group-hover:scale-110 transition-transform`}>
-                                    {feature.icon}
-                                </div>
-                                <h3 className="text-2xl font-bold font-outfit mb-4 group-hover:text-primary transition-colors">{feature.title}</h3>
-                                <p className="text-muted-foreground leading-relaxed">
-                                    {feature.description}
-                                </p>
-                                <div className="mt-8 flex items-center text-primary font-bold opacity-0 group-hover:opacity-100 transition-opacity">
-                                    Learn more <ChevronRight className="ml-2 w-4 h-4" />
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-
-                    {/* Integration Section */}
-                    <section className="mt-32 p-8 lg:p-16 bg-primary rounded-[3rem] text-primary-foreground relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-                        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                {/* Integration Section */}
+                <section className="pt-8 mt-16 container-premium bg-primary md:bg-transparent">
+                    <div className="relative bg-primary md:rounded-[3rem] text-primary-foreground overflow-hidden">
+                        <div className="relative z-10 grid grid-cols-1 py-8 md:p-8 lg:p-16 lg:grid-cols-2 gap-12 items-center">
                             <div>
                                 <h2 className="text-4xl font-bold font-outfit mb-6">Designed for the Community.</h2>
                                 <p className="text-lg opacity-90 mb-8 leading-relaxed">
@@ -151,8 +150,8 @@ export default function FeaturesPage() {
                                 </div>
                             </div>
                         </div>
-                    </section>
-                </div>
+                    </div>
+                </section>
             </main>
 
         </>

@@ -45,7 +45,7 @@ export default function Home() {
                 <motion.p variants={fadeIn} className="text-xl text-muted-foreground leading-relaxed max-w-xl">
                   Juicy burgers, crispy fried chicken, or authentic Wayanad specials. Whether you need a quick bite or a traditional feast, we pick it up for you.
                 </motion.p>
-                <motion.div variants={fadeIn} className="flex flex-wrap gap-4 pt-4">
+                <motion.div variants={fadeIn} className="flex md:flex-wrap gap-4 pt-4">
                   <Button size="lg" className="rounded-full h-14 px-8 text-lg font-bold group">
                     Order Now
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -231,10 +231,10 @@ export default function Home() {
         </section>
 
         {/* Join the Force Section */}
-        <section className="py-24 relative overflow-hidden">
+        <section className="md:py-24 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 translate-x-1/2"></div>
-          <div className="container-premium relative z-10">
-            <div className="p-8 lg:p-16 bg-foreground rounded-[3rem] text-white overflow-hidden relative">
+          <div className="relative container-premium bg-foreground md:bg-transparent  z-10">
+            <div className="py-8 lg:p-16 bg-foreground md:rounded-[3rem] text-white overflow-hidden relative">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="space-y-8">
                   <h2 className="text-4xl lg:text-5xl font-bold font-outfit">
@@ -244,11 +244,11 @@ export default function Home() {
                   <p className="text-lg text-white/70 leading-relaxed max-w-lg">
                     Whether you own a restaurant or have a bike, pickfoo is your gateway to growing with Wayanad's fastest delivery network.
                   </p>
-                  <div className="flex flex-wrap gap-4">
-                    <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full h-14 px-8 text-lg font-bold">
+                  <div className="flex justify-center md:justify-start flex-wrap gap-4">
+                    <Button className="bg-primary w-full md:w-auto hover:bg-primary/90 text-primary-foreground rounded-full h-14 px-8 text-lg font-bold">
                       Become a Partner
                     </Button>
-                    <Button variant="outline" className="bg-transparent text-white border-white/20 hover:bg-white/10 rounded-full h-14 px-8 text-lg font-bold">
+                    <Button variant="outline" className="bg-transparent w-full md:w-auto text-white border-white/20 hover:bg-white/10 rounded-full h-14 px-8 text-lg font-bold">
                       Delivery Fleet
                     </Button>
                   </div>

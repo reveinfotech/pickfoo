@@ -30,7 +30,6 @@ const specialties = [
 export default function WayanadPage() {
     return (
         <>
-
             <main className="flex-grow">
                 {/* Immersive Hero */}
                 <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">

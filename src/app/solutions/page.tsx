@@ -30,73 +30,72 @@ const solutions = [
 export default function SolutionsPage() {
     return (
         <>
+            <main className="flex-grow pt-32 md:pb-20">
+                <div className="container-premium mx-auto text-center mb-24">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="inline-block px-4 py-1.5 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-bold uppercase tracking-wider mb-6"
+                    >
+                        For Business
+                    </motion.div>
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 }}
+                        className="text-5xl lg:text-7xl font-bold font-outfit mb-8"
+                    >
+                        Modern Solutions for <span className="text-primary italic">Modern Merchants</span>.
+                    </motion.h1>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2 }}
+                        className="text-xl text-muted-foreground leading-relaxed"
+                    >
+                        We provide the tools, technology, and logistics. You provide the flavor. Together, we grow Wayanad's culinary economy.
+                    </motion.p>
+                </div>
 
-            <main className="flex-grow pt-32 pb-20">
-                <div className="container-premium">
-                    <div className="max-w-4xl mx-auto text-center mb-24">
+                <div className="grid grid-cols-1 md:grid-cols-2 container-premium gap-8 mb-32">
+                    {solutions.map((item, i) => (
                         <motion.div
+                            key={i}
                             initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            className="inline-block px-4 py-1.5 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-bold uppercase tracking-wider mb-6"
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: i * 0.1 }}
+                            className="p-10 rounded-[3rem] bg-white border border-primary/5 hover:bg-secondary/20 transition-all group"
                         >
-                            For Business
+                            <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
+                                {item.icon}
+                            </div>
+                            <h3 className="text-2xl font-bold font-outfit mb-4">{item.title}</h3>
+                            <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
                         </motion.div>
-                        <motion.h1
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.1 }}
-                            className="text-5xl lg:text-7xl font-bold font-outfit mb-8"
-                        >
-                            Modern Solutions for <span className="text-primary italic">Modern Merchants</span>.
-                        </motion.h1>
-                        <motion.p
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.2 }}
-                            className="text-xl text-muted-foreground leading-relaxed"
-                        >
-                            We provide the tools, technology, and logistics. You provide the flavor. Together, we grow Wayanad's culinary economy.
-                        </motion.p>
-                    </div>
+                    ))}
+                </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-32">
-                        {solutions.map((item, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.1 }}
-                                className="p-10 rounded-[3rem] bg-white border border-primary/5 hover:bg-secondary/20 transition-all group"
-                            >
-                                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
-                                    {item.icon}
-                                </div>
-                                <h3 className="text-2xl font-bold font-outfit mb-4">{item.title}</h3>
-                                <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
-                            </motion.div>
-                        ))}
-                    </div>
 
-                    {/* Integration Highlight */}
-                    <section className="relative p-12 lg:p-24 bg-foreground rounded-[4rem] text-white overflow-hidden">
-                        <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/20 blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
-                            <div className="space-y-8">
+                {/* Integration Highlight */}
+                <section className="pt-8 mt-16 container-premium bg-foreground md:bg-transparent">
+                    <div className="relative bg-foreground md:rounded-[3rem] text-white overflow-hidden">
+                        <div className="relative z-10 grid grid-cols-1 py-8 md:p-8 lg:p-16 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+                            <div className="space-y-6 md:space-y-8">
                                 <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center text-primary-foreground">
                                     <Zap className="w-8 h-8 fill-current" />
                                 </div>
-                                <h2 className="text-4xl lg:text-5xl font-bold font-outfit leading-tight">
+                                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-outfit leading-tight">
                                     Lightning Fast <span className="text-primary">Dashboard</span> Integration.
                                 </h2>
-                                <p className="text-lg text-white/70 leading-relaxed">
+                                <p className="text-base md:text-lg text-white/70 leading-relaxed">
                                     Get your kitchen live in less than 48 hours. Our intuitive merchant dashboard allows you to manage menus, track orders, and view performance on any device.
                                 </p>
-                                <div className="flex flex-wrap gap-4">
-                                    <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full h-14 px-8 font-bold">
+                                <div className="flex flex-col sm:flex-row flex-wrap gap-4">
+                                    <Button className="bg-primary w-full sm:w-auto hover:bg-primary/90 text-primary-foreground rounded-full h-14 px-8 font-bold">
                                         Get Started Now
                                     </Button>
-                                    <Button variant="outline" className="text-primary border-white/20 hover:bg-white/10 rounded-full h-14 px-8 font-bold">
+                                    <Button variant="outline" className="text-foreground border-white/20 hover:bg-white/10 hover:text-white rounded-full h-14 px-8 font-bold w-full sm:w-auto">
                                         View Demo Dashboard
                                     </Button>
                                 </div>
@@ -104,28 +103,27 @@ export default function SolutionsPage() {
                             <div className="relative">
                                 <div className="aspect-video bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 p-4 shadow-2xl relative">
                                     {/* Mock dashboard element */}
-                                    <div className="w-full h-full bg-black/40 rounded-2xl overflow-hidden border border-white/5 p-6 space-y-4">
-                                        <div className="flex justify-between items-center mb-8">
-                                            <div className="h-4 w-32 bg-white/10 rounded"></div>
-                                            <div className="h-8 w-8 bg-primary/20 rounded-full"></div>
+                                    <div className="w-full h-full bg-black/40 rounded-2xl overflow-hidden border border-white/5 p-4 md:p-6 space-y-3 md:space-y-4">
+                                        <div className="flex justify-between items-center mb-4 md:mb-8">
+                                            <div className="h-3 md:h-4 w-24 md:w-32 bg-white/10 rounded"></div>
+                                            <div className="h-6 md:h-8 w-6 md:w-8 bg-primary/20 rounded-full"></div>
                                         </div>
-                                        <div className="grid grid-cols-2 gap-4">
-                                            <div className="h-32 bg-white/5 rounded-2xl"></div>
-                                            <div className="h-32 bg-white/5 rounded-2xl"></div>
+                                        <div className="grid grid-cols-2 gap-3 md:gap-4">
+                                            <div className="h-24 md:h-32 bg-white/5 rounded-2xl"></div>
+                                            <div className="h-24 md:h-32 bg-white/5 rounded-2xl"></div>
                                         </div>
-                                        <div className="h-40 bg-white/5 rounded-2xl"></div>
+                                        <div className="h-32 md:h-40 bg-white/5 rounded-2xl"></div>
                                     </div>
                                     {/* Floating badge */}
-                                    <div className="absolute -top-6 -right-6 bg-primary text-primary-foreground px-6 py-3 rounded-full font-bold shadow-xl rotate-6">
+                                    <div className="absolute -top-4 -right-4 md:-top-6 md:-right-6 bg-primary text-primary-foreground px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base font-bold shadow-xl rotate-6">
                                         +42% Growth
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </section>
-                </div>
+                    </div>
+                </section>
             </main>
-
         </>
     );
 }
