@@ -91,7 +91,7 @@ export default function FeaturesPage() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="p-8 rounded-[2.5rem] bg-white border border-primary/5 hover:border-primary/20 transition-all hover:shadow-2xl hover:-translate-y-2 group"
+                            className="p-8 rounded-[2.5rem] bg-card border border-primary/5 hover:border-primary/20 transition-all hover:shadow-2xl hover:-translate-y-2 group"
                         >
                             <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 ${feature.color} group-hover:scale-110 transition-transform`}>
                                 {feature.icon}

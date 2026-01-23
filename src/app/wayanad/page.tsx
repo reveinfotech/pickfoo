@@ -116,7 +116,7 @@ export default function WayanadPage() {
                 </section>
 
                 {/* Food Journey */}
-                <section className="py-24 bg-foreground text-white overflow-hidden">
+                <section className="py-24 bg-secondary text-white overflow-hidden">
                     <div className="container-premium">
                         <div className="text-center max-w-3xl mx-auto mb-20">
                             <h2 className="text-4xl lg:text-5xl font-bold font-outfit mb-6">A Journey through Local Kitchens</h2>

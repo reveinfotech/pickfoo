@@ -91,28 +91,28 @@ export default function Home() {
                   <motion.div
                     animate={{ y: [0, -10, 0] }}
                     transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute top-8 left-8 bg-white/90 backdrop-blur p-4 rounded-2xl shadow-xl flex items-center space-x-3"
+                    className="absolute top-8 left-8 bg-card/90 backdrop-blur p-4 rounded-2xl shadow-xl flex items-center space-x-3"
                   >
                     <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center text-primary">
                       <Zap className="w-6 h-6 fill-current" />
                     </div>
                     <div>
                       <p className="text-[10px] uppercase font-bold text-muted-foreground">Speed Status</p>
-                      <p className="font-bold text-black text-sm">Lightning Fast</p>
+                      <p className="font-bold text-foreground text-sm">Lightning Fast</p>
                     </div>
                   </motion.div>
 
                   <motion.div
                     animate={{ y: [0, 10, 0] }}
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute bottom-8 right-8 bg-white/90 backdrop-blur p-4 rounded-2xl shadow-xl flex items-center space-x-3"
+                    className="absolute bottom-8 right-8 bg-card/90 backdrop-blur p-4 rounded-2xl shadow-xl flex items-center space-x-3"
                   >
                     <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center text-primary">
                       <MapPin className="w-6 h-6" />
                     </div>
                     <div>
                       <p className="text-[10px] uppercase font-bold text-muted-foreground">Served Hot In</p>
-                      <p className="font-bold text-black text-sm">Wayanad Hills</p>
+                      <p className="font-bold text-foreground text-sm">Wayanad Hills</p>
                     </div>
                   </motion.div>
                 </div>
@@ -122,7 +122,7 @@ export default function Home() {
         </section>
 
         {/* Problems & Solutions (Quick Highlight) */}
-        <section className="py-24 bg-white">
+        <section className="py-24 bg-card">
           <div className="container-premium">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-4xl font-bold font-outfit mb-6">Why Wayanad Loves <span className="text-primary italic">pickfoo?</span></h2>
@@ -233,8 +233,8 @@ export default function Home() {
         {/* Join the Force Section */}
         <section className="md:py-24 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 translate-x-1/2"></div>
-          <div className="relative container-premium bg-foreground md:bg-transparent  z-10">
-            <div className="py-8 lg:p-16 bg-foreground md:rounded-[3rem] text-white overflow-hidden relative">
+          <div className="relative container-premium bg-secondary md:bg-transparent  z-10">
+            <div className="py-8 lg:p-16 bg-secondary md:rounded-[3rem] text-white overflow-hidden relative">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="space-y-8">
                   <h2 className="text-4xl lg:text-5xl font-bold font-outfit">

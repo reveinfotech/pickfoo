@@ -65,7 +65,7 @@ export default function SolutionsPage() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.1 }}
-                            className="p-10 rounded-[3rem] bg-white border border-primary/5 hover:bg-secondary/20 transition-all group"
+                            className="p-10 rounded-[3rem] bg-card border border-primary/5 hover:bg-secondary/20 transition-all group"
                         >
                             <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
                                 {item.icon}
@@ -78,8 +78,8 @@ export default function SolutionsPage() {
 
 
                 {/* Integration Highlight */}
-                <section className="pt-8 mt-16 container-premium bg-foreground md:bg-transparent">
-                    <div className="relative bg-foreground md:rounded-[3rem] text-white overflow-hidden">
+                <section className="pt-8 mt-16 container-premium bg-secondary md:bg-transparent">
+                    <div className="relative bg-secondary md:rounded-[3rem] text-white overflow-hidden">
                         <div className="relative z-10 grid grid-cols-1 py-8 md:p-8 lg:p-16 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
                             <div className="space-y-6 md:space-y-8">
                                 <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center text-primary-foreground">
@@ -95,7 +95,7 @@ export default function SolutionsPage() {
                                     <Button className="bg-primary w-full sm:w-auto hover:bg-primary/90 text-primary-foreground rounded-full h-14 px-8 font-bold">
                                         Get Started Now
                                     </Button>
-                                    <Button variant="outline" className="text-foreground border-white/20 hover:bg-white/10 hover:text-white rounded-full h-14 px-8 font-bold w-full sm:w-auto">
+                                    <Button variant="outline" className="text-white border-white/20 hover:bg-white/10 hover:text-white rounded-full h-14 px-8 font-bold w-full sm:w-auto">
                                         View Demo Dashboard
                                     </Button>
                                 </div>

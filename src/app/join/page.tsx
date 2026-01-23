@@ -1,7 +1,8 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Store, Bike, CheckCircle2, ArrowRight } from "lucide-react";
 
 export default function JoinPage() {
@@ -24,7 +25,7 @@ export default function JoinPage() {
                             transition={{ delay: 0.1 }}
                             className="text-xl text-muted-foreground leading-relaxed"
                         >
-                            Whether you cook amazing food or love the open road, there's a place for you in the pickfoo family.
+                            Whether you cook amazing food or love the open road, there&apos;s a place for you in the pickfoo family.
                         </motion.p>
                     </div>
 
@@ -34,9 +35,9 @@ export default function JoinPage() {
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="group p-10 lg:p-16 rounded-[3.5rem] bg-secondary/30 border border-primary/5 hover:border-primary/20 transition-all hover:bg-white hover:shadow-2xl relative overflow-hidden"
+                            className="group p-10 lg:p-16 rounded-[3.5rem] bg-secondary/30 border border-primary/5 hover:border-primary/20 transition-all hover:bg-card hover:shadow-2xl relative overflow-hidden"
                         >
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-[5rem] group-hover:bg-primary/10 transition-colors"></div>
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-[5rem] group-hover:bg-primary/10 transition-colors pointer-events-none"></div>
 
                             <div className="w-20 h-20 bg-primary/10 rounded-3xl flex items-center justify-center text-primary mb-10 group-hover:scale-110 transition-transform">
                                 <Store className="w-10 h-10" />
@@ -61,10 +62,18 @@ export default function JoinPage() {
                                 ))}
                             </ul>
 
-                            <Button size="lg" className="w-full h-16 rounded-2xl text-lg font-bold group">
+                            <a
+                                href="https://restaurant.pickfoo.in/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={cn(
+                                    buttonVariants({ size: "lg" }),
+                                    "w-full h-16 rounded-2xl text-lg font-bold group relative z-50 cursor-pointer"
+                                )}
+                            >
                                 Register Restaurant
                                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                            </Button>
+                            </a>
                         </motion.div>
 
                         {/* Delivery Partner */}
@@ -72,9 +81,9 @@ export default function JoinPage() {
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="group p-10 lg:p-16 rounded-[3.5rem] bg-foreground text-white border border-white/5 transition-all hover:shadow-2xl relative overflow-hidden"
+                            className="group p-10 lg:p-16 rounded-[3.5rem] bg-secondary text-white border border-white/5 transition-all hover:shadow-2xl relative overflow-hidden"
                         >
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-[5rem]"></div>
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-[5rem] pointer-events-none"></div>
 
                             <div className="w-20 h-20 bg-primary/20 rounded-3xl flex items-center justify-center text-primary mb-10 group-hover:scale-110 transition-transform">
                                 <Bike className="w-10 h-10" />
@@ -99,7 +108,7 @@ export default function JoinPage() {
                                 ))}
                             </ul>
 
-                            <Button variant="outline" size="lg" className="w-full h-16 rounded-2xl text-lg font-bold bg-transparent border-white/20 text-white hover:bg-white hover:text-black group">
+                            <Button variant="outline" size="lg" className="w-full h-16 rounded-2xl text-lg font-bold bg-transparent border-white/20 text-white hover:bg-primary hover:text-primary-foreground group">
                                 Apply to Deliver
                                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </Button>
