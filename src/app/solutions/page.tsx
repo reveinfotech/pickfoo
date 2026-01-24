@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { BarChart3, Rocket, HeartHandshake, ShieldCheck, ArrowRight, Zap } from "lucide-react";
+import { BarChart3, Rocket, HeartHandshake, ShieldCheck, Zap } from "lucide-react";
 
 const solutions = [
     {
@@ -53,11 +53,11 @@ export default function SolutionsPage() {
                         transition={{ delay: 0.2 }}
                         className="text-xl text-muted-foreground leading-relaxed"
                     >
-                        We provide the tools, technology, and logistics. You provide the flavor. Together, we grow Wayanad's culinary economy.
+                        We provide the tools, technology, and logistics. You provide the flavor. Together, we grow Wayanad&rsquo;s culinary economy.
                     </motion.p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 container-premium gap-8 mb-32">
+                <div className="grid grid-cols-1 md:grid-cols-4 container-premium gap-8 mb-32">
                     {solutions.map((item, i) => (
                         <motion.div
                             key={i}
