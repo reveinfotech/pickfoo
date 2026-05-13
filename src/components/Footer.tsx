@@ -86,6 +86,11 @@ export function Footer() {
                                 </Link>
                             </li>
                             <li>
+                                <Link href="/delete-account" className="text-muted-foreground hover:text-primary transition-colors">
+                                    Delete account
+                                </Link>
+                            </li>
+                            <li>
                                 <a href="mailto:contact@pickfoo.com" className="text-muted-foreground hover:text-primary transition-colors">
                                     Contact Us
                                 </a>

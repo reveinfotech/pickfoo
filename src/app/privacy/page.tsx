@@ -446,6 +446,9 @@ export default function PrivacyPage() {
 				<Link href="/terms" className="text-primary font-medium hover:underline">
 					Terms &amp; Conditions
 				</Link>
+				<Link href="/delete-account" className="text-primary font-medium hover:underline">
+					Delete account
+				</Link>
 			</p>
 		</div>
 	);
