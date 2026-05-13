@@ -60,9 +60,36 @@ export function Footer() {
                     <div>
                         <h4 className="text-lg font-bold font-outfit mb-6">Support</h4>
                         <ul className="space-y-4">
-                            <li className="text-muted-foreground">Privacy Policy</li>
-                            <li className="text-muted-foreground">Terms of Service</li>
-                            <li className="text-muted-foreground">Contact Us</li>
+                            <li>
+                                <Link href="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
+                                    Privacy Policy
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/cookie-policy" className="text-muted-foreground hover:text-primary transition-colors">
+                                    Cookie Policy
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/cookie-policy#cookie-settings" className="text-muted-foreground hover:text-primary transition-colors">
+                                    Cookie Settings
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/refund-policy" className="text-muted-foreground hover:text-primary transition-colors">
+                                    Refund Policy
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/terms" className="text-muted-foreground hover:text-primary transition-colors">
+                                    Terms &amp; Conditions
+                                </Link>
+                            </li>
+                            <li>
+                                <a href="mailto:contact@pickfoo.com" className="text-muted-foreground hover:text-primary transition-colors">
+                                    Contact Us
+                                </a>
+                            </li>
                             <li className="text-muted-foreground font-semibold">contact@pickfoo.com</li>
                         </ul>
                     </div>
