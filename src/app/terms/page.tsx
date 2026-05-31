@@ -74,10 +74,10 @@ export default function TermsPage() {
 						<li>
 							Notify us immediately at{" "}
 							<a
-								href="mailto:info@pickfoo.in"
+								href="mailto:contact@pickfoo.in"
 								className="text-primary underline underline-offset-2 hover:no-underline"
 							>
-								info@pickfoo.in
+								contact@pickfoo.in
 							</a>{" "}
 							if you suspect unauthorised access to your account
 						</li>
@@ -152,10 +152,10 @@ export default function TermsPage() {
 						confirmed and accepted by the Restaurant Partner, modifications may not be possible. Please contact
 						our support team immediately at{" "}
 						<a
-							href="mailto:info@pickfoo.in"
+							href="mailto:contact@pickfoo.in"
 							className="text-primary underline underline-offset-2 hover:no-underline"
 						>
-							info@pickfoo.in
+							contact@pickfoo.in
 						</a>{" "}
 						if you notice an error.
 					</p>
@@ -293,10 +293,10 @@ export default function TermsPage() {
 						All refund requests must be raised within 24 hours of the order delivery time through the app or by
 						contacting{" "}
 						<a
-							href="mailto:info@pickfoo.in"
+							href="mailto:contact@pickfoo.in"
 							className="text-primary underline underline-offset-2 hover:no-underline"
 						>
-							info@pickfoo.in
+							contact@pickfoo.in
 						</a>
 						. Requests submitted after this period may not be considered. Pickfoo&apos;s decision on refunds is
 						final. For more detail, see our{" "}
@@ -470,10 +470,10 @@ export default function TermsPage() {
 						<p>
 							Email:{" "}
 							<a
-								href="mailto:info@pickfoo.in"
+								href="mailto:contact@pickfoo.in"
 								className="text-primary underline underline-offset-2 hover:no-underline"
 							>
-								info@pickfoo.in
+								contact@pickfoo.in
 							</a>
 						</p>
 					</address>
@@ -511,10 +511,10 @@ export default function TermsPage() {
 					<p className="text-muted-foreground">
 						You may also delete your account at any time through the app settings or by contacting us at{" "}
 						<a
-							href="mailto:info@pickfoo.in"
+							href="mailto:contact@pickfoo.in"
 							className="text-primary underline underline-offset-2 hover:no-underline"
 						>
-							info@pickfoo.in
+							contact@pickfoo.in
 						</a>
 						. Upon account deletion, your personal data will be handled in accordance with our{" "}
 						<Link href="/privacy" className="text-primary underline underline-offset-2 hover:no-underline">
@@ -570,10 +570,10 @@ export default function TermsPage() {
 						<p>
 							Email:{" "}
 							<a
-								href="mailto:info@pickfoo.in"
+								href="mailto:contact@pickfoo.in"
 								className="text-primary underline underline-offset-2 hover:no-underline"
 							>
-								info@pickfoo.in
+								contact@pickfoo.in
 							</a>
 						</p>
 					</address>

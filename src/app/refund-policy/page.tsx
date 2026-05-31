@@ -153,10 +153,10 @@ export default function RefundPolicyPage() {
 						<li>
 							<strong className="text-foreground">Email:</strong> Send your request to{" "}
 							<a
-								href="mailto:info@pickfoo.in"
+								href="mailto:contact@pickfoo.in"
 								className="text-primary underline underline-offset-2 hover:no-underline"
 							>
-								info@pickfoo.in
+								contact@pickfoo.in
 							</a>{" "}
 							with your Order ID and issue details
 						</li>
@@ -333,10 +333,10 @@ export default function RefundPolicyPage() {
 					<p className="text-muted-foreground">
 						If you believe your account has been flagged incorrectly, please contact our Grievance Officer at{" "}
 						<a
-							href="mailto:info@pickfoo.in"
+							href="mailto:contact@pickfoo.in"
 							className="text-primary underline underline-offset-2 hover:no-underline"
 						>
-							info@pickfoo.in
+							contact@pickfoo.in
 						</a>{" "}
 						with your account details and a description of the situation.
 					</p>
@@ -354,10 +354,10 @@ export default function RefundPolicyPage() {
 						<p>
 							Email:{" "}
 							<a
-								href="mailto:info@pickfoo.in"
+								href="mailto:contact@pickfoo.in"
 								className="text-primary underline underline-offset-2 hover:no-underline"
 							>
-								info@pickfoo.in
+								contact@pickfoo.in
 							</a>
 						</p>
 					</address>

@@ -79,10 +79,10 @@ export default function CookiePolicyPage() {
 						, which are available on the Pickfoo Platform. If you have any
 						questions, please contact us at{" "}
 						<a
-							href="mailto:info@pickfoo.in"
+							href="mailto:contact@pickfoo.in"
 							className="text-primary underline underline-offset-2 hover:no-underline"
 						>
-							info@pickfoo.in
+							contact@pickfoo.in
 						</a>
 						.
 					</p>
@@ -395,10 +395,10 @@ export default function CookiePolicyPage() {
 						cookies or tracking technologies to collect personal information from minors. If you believe a
 						minor is using our Platform, please contact us at{" "}
 						<a
-							href="mailto:info@pickfoo.in"
+							href="mailto:contact@pickfoo.in"
 							className="text-primary underline underline-offset-2 hover:no-underline"
 						>
-							info@pickfoo.in
+							contact@pickfoo.in
 						</a>{" "}
 						so that we can take appropriate action.
 					</p>
@@ -436,10 +436,10 @@ export default function CookiePolicyPage() {
 						<p>
 							Email:{" "}
 							<a
-								href="mailto:info@pickfoo.in"
+								href="mailto:contact@pickfoo.in"
 								className="text-primary underline underline-offset-2 hover:no-underline"
 							>
-								info@pickfoo.in
+								contact@pickfoo.in
 							</a>
 						</p>
 					</address>

@@ -96,11 +96,11 @@ export function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <a href="mailto:contact@pickfoo.com" className="text-muted-foreground hover:text-primary transition-colors">
+                                <a href="mailto:contact@pickfoo.in" className="text-muted-foreground hover:text-primary transition-colors">
                                     Contact Us
                                 </a>
                             </li>
-                            <li className="text-muted-foreground font-semibold">contact@pickfoo.com</li>
+                            <li className="text-muted-foreground font-semibold">contact@pickfoo.in</li>
                         </ul>
                     </div>
                 </div>

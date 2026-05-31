@@ -268,10 +268,10 @@ export default function PrivacyPage() {
 						While we take all reasonable precautions, no method of electronic transmission or storage is 100%
 						secure. If you become aware of any security breach, please contact us immediately at{" "}
 						<a
-							href="mailto:info@pickfoo.in"
+							href="mailto:contact@pickfoo.in"
 							className="text-primary underline underline-offset-2 hover:no-underline"
 						>
-							info@pickfoo.in
+							contact@pickfoo.in
 						</a>
 						.
 					</p>
@@ -343,10 +343,10 @@ export default function PrivacyPage() {
 					<p className="text-muted-foreground">
 						To exercise any of these rights, please contact our Data Protection Officer at{" "}
 						<a
-							href="mailto:info@pickfoo.in"
+							href="mailto:contact@pickfoo.in"
 							className="text-primary underline underline-offset-2 hover:no-underline"
 						>
-							info@pickfoo.in
+							contact@pickfoo.in
 						</a>
 						. We will respond to your request within 30 days.
 					</p>
@@ -360,10 +360,10 @@ export default function PrivacyPage() {
 						delete such data promptly. If you believe we have inadvertently collected information from a minor,
 						please contact us at{" "}
 						<a
-							href="mailto:info@pickfoo.in"
+							href="mailto:contact@pickfoo.in"
 							className="text-primary underline underline-offset-2 hover:no-underline"
 						>
-							info@pickfoo.in
+							contact@pickfoo.in
 						</a>
 						.
 					</p>
@@ -407,10 +407,10 @@ export default function PrivacyPage() {
 						<p>
 							Email:{" "}
 							<a
-								href="mailto:info@pickfoo.in"
+								href="mailto:contact@pickfoo.in"
 								className="text-primary underline underline-offset-2 hover:no-underline"
 							>
-								info@pickfoo.in
+								contact@pickfoo.in
 							</a>
 						</p>
 					</address>

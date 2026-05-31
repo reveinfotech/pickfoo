@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 	robots: { index: true, follow: true },
 };
 
-const deleteEmail = "info@pickfoo.in";
+const deleteEmail = "contact@pickfoo.in";
 const deleteMailto = `mailto:${deleteEmail}?subject=${encodeURIComponent("Pickfoo — Account deletion request")}`;
 
 export default function DeleteAccountPage() {

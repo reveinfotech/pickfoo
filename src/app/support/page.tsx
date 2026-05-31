@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 	robots: { index: true, follow: true },
 };
 
-const supportEmail = "info@pickfoo.in";
+const supportEmail = "contact@pickfoo.in";
 const supportMailto = `mailto:${supportEmail}?subject=${encodeURIComponent("Pickfoo — Support request")}`;
 
 export default function SupportPage() {
