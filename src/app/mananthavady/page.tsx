@@ -49,8 +49,8 @@ export default function MananthavadyPage() {
 					</p>
 					<div className="flex flex-wrap gap-4">
 						<Button asChild size="lg" className="rounded-full h-12 px-8 font-bold">
-							<Link href="/join">
-								Partner with us
+							<Link href="/#download">
+								Download the app
 								<ArrowRight className="ml-2 w-4 h-4" />
 							</Link>
 						</Button>

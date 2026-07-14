@@ -8,6 +8,7 @@ import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { AppDownloadButtons } from "@/components/AppDownloadButtons";
 import { cn } from "@/lib/utils";
 
 const navItems = [
@@ -71,8 +72,8 @@ export function Navbar() {
                             {item.name}
                         </Link>
                     ))}
-                    <Button className="font-semibold px-6 rounded-full">
-                        Download App
+                    <Button asChild className="font-semibold px-6 rounded-full">
+                        <Link href="/#download">Download App</Link>
                     </Button>
                 </nav>
 
@@ -115,11 +116,10 @@ export function Navbar() {
                                         initial={{ opacity: 0, scale: 0.9 }}
                                         animate={{ opacity: 1, scale: 1 }}
                                         transition={{ delay: 0.4 }}
-                                        className="pt-8"
+                                        className="pt-8 flex justify-center"
+                                        onClick={() => setIsOpen(false)}
                                     >
-                                        <Button className="w-full h-14 text-lg font-bold rounded-full shadow-lg hover:shadow-primary/25 hover:scale-105 transition-all">
-                                            Download App
-                                        </Button>
+                                        <AppDownloadButtons />
                                     </motion.div>
                                 </nav>
 

@@ -2,6 +2,7 @@ import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ContactEmail } from "@/components/ContactEmail";
+import { AppDownloadButtons } from "@/components/AppDownloadButtons";
 import { SOCIAL_PROFILES } from "@/lib/seo";
 
 const socialLinks = [
@@ -30,6 +31,7 @@ export function Footer() {
 						<p className="text-muted-foreground leading-relaxed">
 							Hyperlocal food delivery for Mananthavady and Wayanad — fast, fresh, and local.
 						</p>
+						<AppDownloadButtons size="compact" />
 						{socialLinks.length > 0 && (
 							<div className="flex space-x-4">
 								{socialLinks.map(({ href, Icon, label }) => (

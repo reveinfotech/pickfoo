@@ -12,6 +12,8 @@
 - Website: https://www.pickfoo.in
 - Contact: contact@pickfoo.in
 - Restaurant partner portal: https://restaurant.pickfoo.in/
+- iOS App Store: https://apps.apple.com/in/app/pickfoo/id6772687742
+- Google Play: https://play.google.com/store/apps/details?id=com.pickfoo.store
 
 Pickfoo is not related to the US company "PickFu".
 

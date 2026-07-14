@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { AppDownloadButtons } from "@/components/AppDownloadButtons";
 import { ArrowRight, Clock, MapPin, Zap, ShieldCheck } from "lucide-react";
 
 const fadeIn = {
@@ -47,7 +48,7 @@ export default function Home() {
                 </motion.p>
                 <motion.div variants={fadeIn} className="flex md:flex-wrap gap-4 pt-4">
                   <Button asChild size="lg" className="rounded-full h-14 px-8 text-lg font-bold group">
-                    <Link href="/mananthavady">
+                    <Link href="/#download">
                       Order in Mananthavady
                       <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
@@ -276,6 +277,26 @@ export default function Home() {
                   {/* Decorative element */}
                   <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary rounded-full blur-3xl opacity-50"></div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Download App */}
+        <section id="download" className="py-24 scroll-mt-24">
+          <div className="container-premium">
+            <div className="max-w-3xl mx-auto text-center space-y-6">
+              <p className="inline-block px-4 py-1.5 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-bold uppercase tracking-wider">
+                Get the app
+              </p>
+              <h2 className="text-4xl lg:text-5xl font-bold font-outfit">
+                Download <span className="text-primary italic">Pickfoo</span>
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Order from local Mananthavady restaurants on iOS or Android — track live, pay your way, and get food delivered to your door.
+              </p>
+              <div className="flex justify-center pt-4">
+                <AppDownloadButtons />
               </div>
             </div>
           </div>

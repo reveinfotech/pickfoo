@@ -6,6 +6,11 @@ export const BRAND_NAME = "Pickfoo Mananthavady";
 export const LEGAL_NAME = "Pickfoo Private Limited";
 export const CONTACT_EMAIL = "contact@pickfoo.in";
 
+export const APP_STORE_URL =
+	"https://apps.apple.com/in/app/pickfoo/id6772687742";
+export const PLAY_STORE_URL =
+	"https://play.google.com/store/apps/details?id=com.pickfoo.store";
+
 export const ADDRESS = {
 	streetAddress: "Mananthavady",
 	addressLocality: "Mananthavady",
@@ -32,7 +37,11 @@ export const SOCIAL_PROFILES = {
 	youtube: "",
 } as const;
 
-export const SAME_AS = Object.values(SOCIAL_PROFILES).filter(Boolean);
+export const SAME_AS = [
+	...Object.values(SOCIAL_PROFILES).filter(Boolean),
+	APP_STORE_URL,
+	PLAY_STORE_URL,
+];
 
 export type PageSeo = {
 	title: string;
