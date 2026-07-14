@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
-	title: "Terms & Conditions | pickfoo",
-	description:
-		"Terms and Conditions governing use of the Pickfoo app and website by Pickfoo Private Limited.",
+	...buildPageMetadata({
+		title: "Terms & Conditions | Pickfoo Mananthavady",
+		description:
+			"Terms and Conditions governing use of the Pickfoo app and website by Pickfoo Private Limited.",
+		path: "/terms",
+	}),
 	robots: { index: true, follow: true },
 };
 

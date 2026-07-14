@@ -65,7 +65,7 @@ export default function WayanadPage() {
                             transition={{ delay: 0.2 }}
                             className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed"
                         >
-                            Beyond landscapes, Wayanad is a flavor. A blend of ancient tribal wisdom and the bounty of the rainforest.
+                            Beyond landscapes, Wayanad is a flavour — ancient tribal wisdom, estate produce, and home kitchens. Pickfoo brings that story to your plate in Mananthavady and across the district.
                         </motion.p>
                     </div>
 
@@ -85,6 +85,9 @@ export default function WayanadPage() {
                                 <h2 className="text-4xl lg:text-5xl font-bold font-outfit leading-tight">
                                     Taste the <span className="text-primary italic">Wilderness</span> in every bite.
                                 </h2>
+                                <p className="text-muted-foreground leading-relaxed">
+                                    From Mananthavady bazaar kitchens to estate cafés, Wayanad cooks with what the Western Ghats give: pepper vines, bamboo groves that flower into rice, shade-grown coffee, and wild honey gathered by tribal communities. These are not marketing buzzwords — they are ingredients you can order through Pickfoo when partner restaurants put them on the menu.
+                                </p>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                     {specialties.map((item, i) => (
                                         <div key={i} className="p-6 bg-secondary/30 rounded-3xl border border-primary/5">
@@ -120,7 +123,7 @@ export default function WayanadPage() {
                     <div className="container-premium">
                         <div className="text-center max-w-3xl mx-auto mb-20">
                             <h2 className="text-4xl lg:text-5xl font-bold font-outfit mb-6">A Journey through Local Kitchens</h2>
-                            <p className="text-lg text-white/60">From the legendary Fish Curry to the aromatic Coffee, we bring you the authentic taste of the hills.</p>
+                            <p className="text-lg text-white/60">From legendary fish curry and Malabar biriyani to puttu breakfasts and bamboo rice payasam — Pickfoo connects you to authentic hill cooking, starting with our Mananthavady launch market.</p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -151,6 +154,16 @@ export default function WayanadPage() {
                                     </div>
                                 </motion.div>
                             ))}
+                        </div>
+
+                        <div className="mt-16 max-w-2xl mx-auto text-center space-y-4">
+                            <p className="text-white/70 leading-relaxed">
+                                Looking for delivery in the launch town itself? Visit our dedicated{" "}
+                                <a href="/mananthavady" className="text-primary font-semibold underline underline-offset-2 hover:no-underline">
+                                    Mananthavady food delivery page
+                                </a>{" "}
+                                for neighbourhood context, how Pickfoo compares to WhatsApp orders, and customer FAQs.
+                            </p>
                         </div>
                     </div>
                 </section>

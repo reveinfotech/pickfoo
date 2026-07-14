@@ -25,7 +25,7 @@ export default function JoinPage() {
                             transition={{ delay: 0.1 }}
                             className="text-xl text-muted-foreground leading-relaxed"
                         >
-                            Whether you cook amazing food or love the open road, there&apos;s a place for you in the pickfoo family.
+                            Whether you cook amazing food in Mananthavady or love the open road across Wayanad, there&apos;s a place for you in the Pickfoo family.
                         </motion.p>
                     </div>
 
@@ -45,7 +45,7 @@ export default function JoinPage() {
 
                             <h2 className="text-3xl lg:text-4xl font-bold font-outfit mb-6">Restaurant Partner</h2>
                             <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
-                                Reach thousands of new customers in Wayanad. Our platform simplifies orders so you can focus on cooking.
+                                Reach new customers across Mananthavady without building your own delivery fleet. Pickfoo simplifies orders so you can focus on cooking.
                             </p>
 
                             <ul className="space-y-4 mb-12">
@@ -117,15 +117,27 @@ export default function JoinPage() {
 
                     {/* FAQ Preview */}
                     <div className="mt-32 max-w-4xl mx-auto text-center">
-                        <h3 className="text-2xl font-bold font-outfit mb-8">Frequently Asked Questions</h3>
+                        <h3 className="text-2xl font-bold font-outfit mb-4">Partner FAQs</h3>
+                        <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+                            Clear answers for Mananthavady restaurant and delivery partners. Customer questions live on our{" "}
+                            <a href="/faq" className="text-primary underline underline-offset-2 hover:no-underline">FAQ page</a>.
+                        </p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
                             <div className="p-6 border-b border-primary/10">
                                 <p className="font-bold mb-2">What documents do I need?</p>
-                                <p className="text-muted-foreground text-sm">For restaurants: FSSAI license, PAN, GST. For delivery: DL, Vehicle RC, Aadhaar.</p>
+                                <p className="text-muted-foreground text-sm">For restaurants: FSSAI licence, PAN, GST (if applicable). For delivery: driving licence, vehicle RC, Aadhaar.</p>
                             </div>
                             <div className="p-6 border-b border-primary/10">
                                 <p className="font-bold mb-2">When do I get paid?</p>
-                                <p className="text-muted-foreground text-sm">All partners receive payouts every Monday directly to their bank accounts.</p>
+                                <p className="text-muted-foreground text-sm">All partners receive payouts every Monday directly to their registered bank accounts.</p>
+                            </div>
+                            <div className="p-6 border-b border-primary/10">
+                                <p className="font-bold mb-2">How long to go live?</p>
+                                <p className="text-muted-foreground text-sm">Most restaurant partners in Mananthavady can go live within 48 hours after document verification.</p>
+                            </div>
+                            <div className="p-6 border-b border-primary/10">
+                                <p className="font-bold mb-2">Where do you operate first?</p>
+                                <p className="text-muted-foreground text-sm">Pickfoo launches in Mananthavady, Wayanad, with phased expansion planned across the district.</p>
                             </div>
                         </div>
                     </div>

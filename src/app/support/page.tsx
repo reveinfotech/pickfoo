@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
-	title: "Support | pickfoo",
-	description:
-		"Get help with the Pickfoo food delivery app. Contact customer support, report order issues, request refunds, or manage your account.",
+	...buildPageMetadata({
+		title: "Support | Pickfoo Mananthavady",
+		description:
+			"Get help with the Pickfoo food delivery app. Contact customer support, report order issues, request refunds, or manage your account.",
+		path: "/support",
+	}),
 	robots: { index: true, follow: true },
 };
 

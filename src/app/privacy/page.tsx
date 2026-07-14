@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
-	title: "Privacy Policy | pickfoo",
-	description:
-		"How Pickfoo Private Limited collects, uses, stores, and protects your personal information on the Pickfoo app, website, and related services.",
+	...buildPageMetadata({
+		title: "Privacy Policy | Pickfoo Mananthavady",
+		description:
+			"How Pickfoo Private Limited collects, uses, stores, and protects your personal information on the Pickfoo app, website, and related services.",
+		path: "/privacy",
+	}),
 	robots: { index: true, follow: true },
 };
 

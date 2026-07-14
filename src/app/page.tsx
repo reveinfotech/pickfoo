@@ -37,34 +37,36 @@ export default function Home() {
                 className="space-y-8"
               >
                 <motion.div variants={fadeIn} className="inline-block px-4 py-1.5 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-bold uppercase tracking-wider">
-                  Wayanad's Eats
+                  Mananthavady First
                 </motion.div>
                 <motion.h1 variants={fadeIn} className="text-5xl lg:text-7xl font-bold font-outfit leading-[1.1] text-foreground">
                   Satisfy Your <span className="text-primary italic">Cravings</span>, Delivered <span className="underline decoration-primary/30">Fast</span>.
                 </motion.h1>
                 <motion.p variants={fadeIn} className="text-xl text-muted-foreground leading-relaxed max-w-xl">
-                  Juicy burgers, crispy fried chicken, or authentic Wayanad specials. Whether you need a quick bite or a traditional feast, we pick it up for you.
+                  Pickfoo Mananthavady brings local kitchens and Wayanad specials to your door — juicy burgers, crispy fried chicken, bamboo rice, and authentic hill flavours in one app.
                 </motion.p>
                 <motion.div variants={fadeIn} className="flex md:flex-wrap gap-4 pt-4">
-                  <Button size="lg" className="rounded-full h-14 px-8 text-lg font-bold group">
-                    Order Now
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <Button asChild size="lg" className="rounded-full h-14 px-8 text-lg font-bold group">
+                    <Link href="/mananthavady">
+                      Order in Mananthavady
+                      <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </Link>
                   </Button>
-                  <Button size="lg" variant="outline" className="rounded-full h-14 px-8 text-lg font-bold border-2">
-                    View Menu
+                  <Button asChild size="lg" variant="outline" className="rounded-full h-14 px-8 text-lg font-bold border-2">
+                    <Link href="/wayanad">Explore Wayanad Food</Link>
                   </Button>
                 </motion.div>
                 <motion.div variants={fadeIn} className="flex items-center space-x-6 pt-6">
                   <div className="flex -space-x-4">
                     {[1, 2, 3, 4].map((i) => (
                       <div key={i} className="w-12 h-12 rounded-full border-4 border-background bg-secondary flex items-center justify-center text-xs font-bold overflow-hidden">
-                        <Image src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${i}`} alt="user" width={48} height={48} />
+                        <Image src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${i}`} alt="" width={48} height={48} />
                       </div>
                     ))}
                   </div>
                   <div className="text-sm">
-                    <p className="font-bold text-foreground">500+ Happy Eaters</p>
-                    <p className="text-muted-foreground">Satisfying hunger across the hills</p>
+                    <p className="font-bold text-foreground">Launching in Mananthavady</p>
+                    <p className="text-muted-foreground">Built for Wayanad&apos;s hills — not a metro copy-paste app</p>
                   </div>
                 </motion.div>
               </motion.div>
@@ -79,10 +81,11 @@ export default function Home() {
                 <div className="relative aspect-square md:aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl shadow-primary/20">
                   <Image
                     src="/images/hero-fastfood.png"
-                    alt="Delicious Fast Food Spread"
+                    alt="Fresh meals ready for delivery in Mananthavady with Pickfoo"
                     fill
                     className="object-cover"
                     priority
+                    fetchPriority="high"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-tr from-black/20 to-transparent"></div>
@@ -112,7 +115,7 @@ export default function Home() {
                     </div>
                     <div>
                       <p className="text-[10px] uppercase font-bold text-muted-foreground">Served Hot In</p>
-                      <p className="font-bold text-foreground text-sm">Wayanad Hills</p>
+                      <p className="font-bold text-foreground text-sm">Mananthavady</p>
                     </div>
                   </motion.div>
                 </div>
@@ -125,9 +128,9 @@ export default function Home() {
         <section className="py-24 bg-card">
           <div className="container-premium">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-4xl font-bold font-outfit mb-6">Why Wayanad Loves <span className="text-primary italic">pickfoo?</span></h2>
+              <h2 className="text-4xl font-bold font-outfit mb-6">Why Mananthavady Chooses <span className="text-primary italic">Pickfoo</span></h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                We understand your cravings. From late-night burgers to authentic lunchtime meals, we deliver happiness across the hills.
+                Major national food apps do not cover Mananthavady yet. Pickfoo is built for this town — and for the hills around it — so you can order from more than one kitchen without juggling WhatsApp numbers.
               </p>
             </div>
 
@@ -136,17 +139,17 @@ export default function Home() {
                 {
                   icon: <Clock className="w-8 h-8" />,
                   title: "No More Waiting",
-                  desc: "Hungry? We get it. Our optimized delivery network ensures your food arrives hot & crispy, faster than ever."
+                  desc: "Hungry after work or after a trek? Our Mananthavady delivery network is tuned for local roads so food arrives hot — not after a metro-length ETA that does not apply here."
                 },
                 {
                   icon: <Zap className="w-8 h-8" />,
                   title: "Hot & Fresh",
-                  desc: "We prioritize speed and packaging so your fries stay crispy and your curry stays hot, all the way to your door."
+                  desc: "We prioritise packaging and speed so fries stay crispy and curry stays hot from partner kitchens across Mananthavady to your door."
                 },
                 {
                   icon: <ShieldCheck className="w-8 h-8" />,
-                  title: "Local & Global",
-                  desc: "Craving a bucket of fried chicken? Or traditional Bamboo Rice? We connect you to the best of both worlds."
+                  title: "Local & Choice",
+                  desc: "Craving fried chicken or traditional bamboo rice? Browse multiple restaurants in one place instead of calling a single kitchen on WhatsApp."
                 }
               ].map((item, index) => (
                 <motion.div
@@ -205,13 +208,13 @@ export default function Home() {
                   Modern Cravings & <span className="text-primary italic">Traditional Roots</span>.
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Wayanad is changing, and so is our appetite. Whether you're a local craving a cheesy pizza or a tourist looking to taste the authentic spices of the hills, pickfoo delivers it all.
+                  Wayanad&apos;s appetite spans café classics and tribal-rooted dishes. Whether you live in Mananthavady or are visiting for the hills, Pickfoo connects you to verified local kitchens — from cheesy pizza to peppery Malabar meals.
                 </p>
                 <ul className="space-y-4">
                   {[
-                    "Top-rated fast food joints & cafes",
-                    "Authentic traditional kitchens for tourists",
-                    "Contact-less, hygienic delivery"
+                    "Partner restaurants across Mananthavady",
+                    "Authentic kitchens for visitors and locals",
+                    "Live tracking and digital payment options"
                   ].map((item, i) => (
                     <li key={i} className="flex items-center space-x-3">
                       <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary">
@@ -221,9 +224,11 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <Button variant="outline" size="lg" className="rounded-full px-8 border-2 group">
-                  Explore Our Menu
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <Button asChild variant="outline" size="lg" className="rounded-full px-8 border-2 group">
+                  <Link href="/faq">
+                    Read FAQs
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </Button>
               </motion.div>
             </div>
@@ -242,14 +247,14 @@ export default function Home() {
                     <span className="text-primary">Deliver</span> the Joy.
                   </h2>
                   <p className="text-lg text-white/70 leading-relaxed max-w-lg">
-                    Whether you own a restaurant or have a bike, pickfoo is your gateway to growing with Wayanad's fastest delivery network.
+                    Whether you own a restaurant in Mananthavady or ride a bike across Wayanad&apos;s roads, Pickfoo is your gateway to growing with the town&apos;s own delivery network.
                   </p>
                   <div className="flex justify-center md:justify-start flex-wrap gap-4">
-                    <Button className="bg-primary w-full md:w-auto hover:bg-primary/90 text-primary-foreground rounded-full h-14 px-8 text-lg font-bold">
-                      Become a Partner
+                    <Button asChild className="bg-primary w-full md:w-auto hover:bg-primary/90 text-primary-foreground rounded-full h-14 px-8 text-lg font-bold">
+                      <Link href="/join">Become a Partner</Link>
                     </Button>
-                    <Button variant="outline" className="bg-transparent w-full md:w-auto text-white border-white/20 hover:bg-white/10 rounded-full h-14 px-8 text-lg font-bold">
-                      Delivery Fleet
+                    <Button asChild variant="outline" className="bg-transparent w-full md:w-auto text-white border-white/20 hover:bg-white/10 rounded-full h-14 px-8 text-lg font-bold">
+                      <Link href="/join">Delivery Fleet</Link>
                     </Button>
                   </div>
                 </div>

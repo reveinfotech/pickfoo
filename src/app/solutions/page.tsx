@@ -53,11 +53,11 @@ export default function SolutionsPage() {
                         transition={{ delay: 0.2 }}
                         className="text-xl text-muted-foreground leading-relaxed"
                     >
-                        We provide the tools, technology, and logistics. You provide the flavor. Together, we grow Wayanad&rsquo;s culinary economy.
+                        We provide the tools, technology, and logistics for Mananthavady kitchens. You provide the flavour. Together, we grow Wayanad&rsquo;s culinary economy.
                     </motion.p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-4 container-premium gap-8 mb-32">
+                <div className="grid grid-cols-1 md:grid-cols-4 container-premium gap-8 mb-16">
                     {solutions.map((item, i) => (
                         <motion.div
                             key={i}
@@ -76,6 +76,13 @@ export default function SolutionsPage() {
                     ))}
                 </div>
 
+                <div className="container-premium max-w-3xl mx-auto mb-24 text-center">
+                    <h2 className="text-3xl font-bold font-outfit mb-4">Why restaurants choose Pickfoo over WhatsApp-only delivery</h2>
+                    <p className="text-muted-foreground leading-relaxed">
+                        Many Mananthavady kitchens already take phone or WhatsApp orders. Pickfoo adds a discoverable storefront, structured menus, live order status, and a shared rider network — so you spend less time coordinating deliveries and more time cooking.
+                    </p>
+                </div>
+
 
                 {/* Integration Highlight */}
                 <section className="pt-8 mt-16 container-premium bg-secondary md:bg-transparent">
@@ -89,20 +96,21 @@ export default function SolutionsPage() {
                                     Lightning Fast <span className="text-primary">Dashboard</span> Integration.
                                 </h2>
                                 <p className="text-base md:text-lg text-white/70 leading-relaxed">
-                                    Get your kitchen live in less than 48 hours. Our intuitive merchant dashboard allows you to manage menus, track orders, and view performance on any device.
+                                    Get your kitchen live in less than 48 hours. Our merchant dashboard lets you manage menus, track orders, and view performance on any device — built for Mananthavady partners first.
                                 </p>
                                 <div className="flex flex-col sm:flex-row flex-wrap gap-4">
-                                    <Button className="bg-primary w-full sm:w-auto hover:bg-primary/90 text-primary-foreground rounded-full h-14 px-8 font-bold">
-                                        Get Started Now
+                                    <Button asChild className="bg-primary w-full sm:w-auto hover:bg-primary/90 text-primary-foreground rounded-full h-14 px-8 font-bold">
+                                        <a href="https://restaurant.pickfoo.in/" target="_blank" rel="noopener noreferrer">
+                                            Get Started Now
+                                        </a>
                                     </Button>
-                                    <Button variant="outline" className="text-white border-white/20 hover:bg-white/10 hover:text-white rounded-full h-14 px-8 font-bold w-full sm:w-auto">
-                                        View Demo Dashboard
+                                    <Button asChild variant="outline" className="text-white border-white/20 hover:bg-white/10 hover:text-white rounded-full h-14 px-8 font-bold w-full sm:w-auto">
+                                        <a href="/join">Partner FAQ</a>
                                     </Button>
                                 </div>
                             </div>
                             <div className="relative">
                                 <div className="aspect-video bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 p-4 shadow-2xl relative">
-                                    {/* Mock dashboard element */}
                                     <div className="w-full h-full bg-black/40 rounded-2xl overflow-hidden border border-white/5 p-4 md:p-6 space-y-3 md:space-y-4">
                                         <div className="flex justify-between items-center mb-4 md:mb-8">
                                             <div className="h-3 md:h-4 w-24 md:w-32 bg-white/10 rounded"></div>
@@ -114,9 +122,8 @@ export default function SolutionsPage() {
                                         </div>
                                         <div className="h-32 md:h-40 bg-white/5 rounded-2xl"></div>
                                     </div>
-                                    {/* Floating badge */}
                                     <div className="absolute -top-4 -right-4 md:-top-6 md:-right-6 bg-primary text-primary-foreground px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base font-bold shadow-xl rotate-6">
-                                        +42% Growth
+                                        Go live in 48h
                                     </div>
                                 </div>
                             </div>

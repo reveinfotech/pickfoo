@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
-	title: "Refund Policy | pickfoo",
-	description:
-		"How Pickfoo Private Limited handles refunds for orders placed through the Pickfoo app and website in India.",
+	...buildPageMetadata({
+		title: "Refund Policy | Pickfoo Mananthavady",
+		description:
+			"How Pickfoo Private Limited handles refunds for orders placed through the Pickfoo app and website in India.",
+		path: "/refund-policy",
+	}),
 	robots: { index: true, follow: true },
 };
 

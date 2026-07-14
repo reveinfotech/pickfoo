@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
-	title: "Delete your Pickfoo account | pickfoo",
-	description:
-		"How to request deletion of your Pickfoo customer account and associated personal data for the Pickfoo app by Pickfoo Private Limited.",
+	...buildPageMetadata({
+		title: "Delete your Pickfoo account | Pickfoo Mananthavady",
+		description:
+			"How to request deletion of your Pickfoo customer account and associated personal data for the Pickfoo app by Pickfoo Private Limited.",
+		path: "/delete-account",
+	}),
 	robots: { index: true, follow: true },
 };
 

@@ -79,7 +79,7 @@ export default function FeaturesPage() {
                         transition={{ delay: 0.2 }}
                         className="text-xl text-muted-foreground leading-relaxed"
                     >
-                        Discover how pickfoo is transforming the culinary landscape of Wayanad with cutting-edge technology and a deep love for local flavors.
+                        Discover how Pickfoo is transforming food delivery in Mananthavady and across Wayanad with hill-aware routes, live tracking, and a deep focus on local kitchens.
                     </motion.p>
                 </div>
 
@@ -107,6 +107,16 @@ export default function FeaturesPage() {
                     ))}
                 </div>
 
+                <section className="container-premium mt-16 max-w-4xl">
+                    <h2 className="text-3xl font-bold font-outfit mb-4">Built for Mananthavady roads, not metro assumptions</h2>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                        Delivery in Wayanad is different from Kochi or Bengaluru. Seasonal monsoon delays, estate roads, and dispersed neighbourhoods need routing that respects the map on the ground. Pickfoo&apos;s product is designed around that reality: clear ETAs, partner kitchens verified for quality, and last-mile reach beyond the main bazaar road.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed">
+                        For diners, that means one app to browse local restaurants. For merchants, it means orders, payouts, and support without building your own rider fleet from scratch.
+                    </p>
+                </section>
+
                 {/* Integration Section */}
                 <section className="pt-8 mt-16 container-premium bg-primary md:bg-transparent">
                     <div className="relative bg-primary md:rounded-[3rem] text-primary-foreground overflow-hidden">
@@ -114,7 +124,7 @@ export default function FeaturesPage() {
                             <div>
                                 <h2 className="text-4xl font-bold font-outfit mb-6">Designed for the Community.</h2>
                                 <p className="text-lg opacity-90 mb-8 leading-relaxed">
-                                    pickfoo isn't just an app; it's an ecosystem. From supporting local farmers to empowering delivery partners, we're building something that stays in the hills.
+                                    Pickfoo isn&apos;t just an app; it&apos;s an ecosystem for Mananthavady — supporting local kitchens, fair partner payouts, and delivery work that stays in the hills.
                                 </p>
                                 <div className="flex flex-wrap gap-8">
                                     <div className="flex items-center space-x-3">
@@ -122,8 +132,8 @@ export default function FeaturesPage() {
                                             <Users className="w-6 h-6" />
                                         </div>
                                         <div>
-                                            <p className="text-2xl font-bold">5,000+</p>
-                                            <p className="text-sm opacity-70">Community Users</p>
+                                            <p className="text-2xl font-bold">Local-first</p>
+                                            <p className="text-sm opacity-70">Launch market: Mananthavady</p>
                                         </div>
                                     </div>
                                     <div className="flex items-center space-x-3">
@@ -131,21 +141,21 @@ export default function FeaturesPage() {
                                             <TrendingUp className="w-6 h-6" />
                                         </div>
                                         <div>
-                                            <p className="text-2xl font-bold">150+</p>
-                                            <p className="text-sm opacity-70">Merchant Partners</p>
+                                            <p className="text-2xl font-bold">Partner-ready</p>
+                                            <p className="text-sm opacity-70">Restaurants &amp; riders welcome</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20">
                                 <blockquote className="text-2xl font-medium italic mb-6">
-                                    "pickfoo has completely changed how we think about logistics in Wayanad. It's fast, reliable, and understands our terrain."
+                                    &ldquo;Finally, a delivery platform that understands Mananthavady — not just the highway towns. Local kitchens deserve the same tools metros take for granted.&rdquo;
                                 </blockquote>
                                 <div className="flex items-center space-x-4">
                                     <div className="w-12 h-12 rounded-full bg-secondary"></div>
                                     <div>
-                                        <p className="font-bold text-lg">Rajesh V.</p>
-                                        <p className="text-sm opacity-70">Restaurant Owner, Kalpetta</p>
+                                        <p className="font-bold text-lg">Launch partner voice</p>
+                                        <p className="text-sm opacity-70">Restaurant owner, Mananthavady</p>
                                     </div>
                                 </div>
                             </div>

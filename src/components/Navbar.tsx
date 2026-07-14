@@ -12,10 +12,12 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
     { name: "Home", href: "/" },
-    { name: "Features", href: "/features" },
+    { name: "Mananthavady", href: "/mananthavady" },
     { name: "Wayanad", href: "/wayanad" },
+    { name: "Features", href: "/features" },
     { name: "Solutions", href: "/solutions" },
     { name: "Join Us", href: "/join" },
+    { name: "FAQ", href: "/faq" },
 ];
 
 export function Navbar() {
@@ -47,7 +49,7 @@ export function Navbar() {
                 <Link href="/" className="flex items-center">
                     <Image
                         src="/logo.png"
-                        alt="pickfoo"
+                        alt="Pickfoo Mananthavady"
                         width={140}
                         height={40}
                         className="h-6 w-auto object-contain"
@@ -56,13 +58,13 @@ export function Navbar() {
                 </Link>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden md:flex items-center space-x-8">
+                <nav className="hidden lg:flex items-center space-x-5 xl:space-x-7">
                     {navItems.map((item) => (
                         <Link
                             key={item.href}
                             href={item.href}
                             className={cn(
-                                "text-sm font-medium transition-colors hover:text-primary",
+                                "text-sm font-medium transition-colors hover:text-primary whitespace-nowrap",
                                 pathname === item.href ? "text-primary border-b-2 border-primary" : "text-muted-foreground"
                             )}
                         >
@@ -74,8 +76,8 @@ export function Navbar() {
                     </Button>
                 </nav>
 
-                {/* Mobile Navigation */}
-                <div className="md:hidden flex items-center">
+                {/* Mobile / tablet Navigation */}
+                <div className="lg:hidden flex items-center">
                     <Sheet open={isOpen} onOpenChange={setIsOpen}>
                         <SheetTrigger asChild>
                             <Button variant="ghost" size="icon" className="relative z-50">
@@ -121,8 +123,9 @@ export function Navbar() {
                                     </motion.div>
                                 </nav>
 
-                                <div className="absolute bottom-10 left-0 right-0 text-center text-muted-foreground text-sm">
-                                    <p>© {new Date().getFullYear()} pickfoo.</p>
+                                <div className="absolute bottom-10 left-0 right-0 text-center text-muted-foreground text-sm space-y-2">
+                                    <Link href="/about" onClick={() => setIsOpen(false)} className="block hover:text-primary">About</Link>
+                                    <p>© {new Date().getFullYear()} Pickfoo Mananthavady.</p>
                                 </div>
                             </div>
                         </SheetContent>
