@@ -10,6 +10,8 @@ export const APP_STORE_URL =
 	"https://apps.apple.com/in/app/pickfoo/id6772687742";
 export const PLAY_STORE_URL =
 	"https://play.google.com/store/apps/details?id=com.pickfoo.store";
+/** Smart link: detects iOS/Android and opens the matching store. Use for QR codes. */
+export const APP_DOWNLOAD_URL = `${SITE_URL}/app`;
 
 export const ADDRESS = {
 	streetAddress: "Mananthavady",
@@ -97,6 +99,12 @@ export const pageSeo = {
 		description:
 			"Answers about Pickfoo in Mananthavady: delivery areas, charges, ordering, restaurant partners, and becoming a delivery partner.",
 		path: "/faq",
+	},
+	app: {
+		title: "Download Pickfoo App | Mananthavady Food Delivery",
+		description:
+			"Get the Pickfoo customer app for iOS or Android. Scan the QR or tap to open the App Store or Google Play for food delivery in Mananthavady.",
+		path: "/app",
 	},
 } as const satisfies Record<string, PageSeo>;
 
@@ -295,6 +303,7 @@ export const INDEXABLE_PATHS = [
 	"/join",
 	"/about",
 	"/faq",
+	"/app",
 	"/support",
 	"/privacy",
 	"/terms",

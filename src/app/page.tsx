@@ -295,7 +295,19 @@ export default function Home() {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Order from local Mananthavady restaurants on iOS or Android — track live, pay your way, and get food delivered to your door.
               </p>
-              <div className="flex justify-center pt-4">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-4">
+                <div className="rounded-2xl border border-primary/15 bg-white p-3 shadow-sm">
+                  <Image
+                    src="/qr-customer-app.png"
+                    alt="QR code to download the Pickfoo customer app"
+                    width={168}
+                    height={168}
+                    className="rounded-lg"
+                  />
+                  <p className="mt-2 text-xs text-muted-foreground">
+                    Scan for iOS or Android
+                  </p>
+                </div>
                 <AppDownloadButtons />
               </div>
             </div>

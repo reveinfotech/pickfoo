@@ -14,6 +14,7 @@
 - Restaurant partner portal: https://restaurant.pickfoo.in/
 - iOS App Store: https://apps.apple.com/in/app/pickfoo/id6772687742
 - Google Play: https://play.google.com/store/apps/details?id=com.pickfoo.store
+- Smart download link (QR): https://www.pickfoo.in/app
 
 Pickfoo is not related to the US company "PickFu".
 
@@ -27,6 +28,7 @@ Pickfoo is not related to the US company "PickFu".
 - [Join](https://www.pickfoo.in/join): Restaurant and delivery partner signup
 - [About](https://www.pickfoo.in/about): Company identity and E-E-A-T
 - [FAQ](https://www.pickfoo.in/faq): Customer questions and direct answers
+- [Download app](https://www.pickfoo.in/app): Smart link / QR — opens App Store or Google Play by device
 - [Support](https://www.pickfoo.in/support): Help and contact
 - [Privacy](https://www.pickfoo.in/privacy): Privacy Policy
 - [Terms](https://www.pickfoo.in/terms): Terms & Conditions
