@@ -2,168 +2,124 @@
 
 import { motion } from "framer-motion";
 import {
-    Zap,
-    Map,
-    Clock,
-    ShieldCheck,
-    Smartphone,
-    Mountain,
-    ChevronRight,
-    TrendingUp,
-    Users
+	Compass,
+	Home,
+	MapPin,
+	MapPinned,
+	Sparkles,
+	Users,
+	UtensilsCrossed,
+	Zap,
 } from "lucide-react";
+import { FaqAccordion } from "@/components/FaqAccordion";
+import { customerFaqs } from "@/lib/seo";
 
 const features = [
-    {
-        icon: <Map className="w-8 h-8" />,
-        title: "AI-Optimized Hill Routes",
-        description: "Wayanad's terrain is unique. Our custom algorithms calculate the fastest path through hills and valleys, avoiding traffic and seasonal road closures.",
-        color: "bg-blue-500/10 text-blue-500"
-    },
-    {
-        icon: <Clock className="w-8 h-8" />,
-        title: "Real-Time Tracking",
-        description: "Watch your order move across the map in real-time. Our high-precision GPS ensures you know exactly when your Puttu is arriving.",
-        color: "bg-orange-500/10 text-orange-500"
-    },
-    {
-        icon: <ShieldCheck className="w-8 h-8" />,
-        title: "Hyper-Local Sourcing",
-        description: "We don't just deliver; we curate. Every restaurant on pickfoo is verified for quality and local ingredient sourcing.",
-        color: "bg-green-500/10 text-green-500"
-    },
-    {
-        icon: <Smartphone className="w-8 h-8" />,
-        title: "Seamless Ordering",
-        description: "A clean, minimalist interface designed for speed. Order your favorite meals in less than 3 taps.",
-        color: "bg-purple-500/10 text-purple-500"
-    },
-    {
-        icon: <Mountain className="w-8 h-8" />,
-        title: "Last-Mile Hill Reach",
-        description: "While others stop at the main road, we go the extra mile to reach the remotest homestays and estates.",
-        color: "bg-red-500/10 text-red-500"
-    },
-    {
-        icon: <TrendingUp className="w-8 h-8" />,
-        title: "Predictive Ordering",
-        description: "Our AI learns your preferences and suggests the best local delicacies based on your mood and the weather.",
-        color: "bg-cyan-500/10 text-cyan-500"
-    }
+	{
+		icon: MapPin,
+		title: "Built With the Places We Serve in Mind",
+		body: "We didn't build Pickfoo by copying what works elsewhere. We built it by paying attention to how things actually work on the ground, the roads, the weather, the places people order from. That approach stays with us as we grow.",
+		color: "bg-blue-500/10 text-blue-500",
+	},
+	{
+		icon: MapPinned,
+		title: "See Where Your Order Is",
+		body: "No more guessing when your food will show up. Once you place an order, you can watch it move from the kitchen to your doorstep. It's not complicated. It just works.",
+		color: "bg-orange-500/10 text-orange-500",
+	},
+	{
+		icon: UtensilsCrossed,
+		title: "Only Restaurants We'd Eat From",
+		body: "We're picky about who we put on the app. Every restaurant we work with, whether it's one of the best restaurants in Wayanad or a hidden spot in Wayanad, is someone we'd order from ourselves. We check them before they go live.",
+		color: "bg-green-500/10 text-green-500",
+	},
+	{
+		icon: Zap,
+		title: "Quick Enough for When You're Hungry",
+		body: "The app is built to be fast. Browse, pick, order, done. No unnecessary steps, no clutter. Just the food you want, as quickly as we can get it to you.",
+		color: "bg-purple-500/10 text-purple-500",
+	},
+	{
+		icon: Home,
+		title: "We Go Where You Are",
+		body: "If you're staying at a homestay, a resort, or a house off the main road, we still figure out how to get there. We don't stop at the town centre.",
+		color: "bg-red-500/10 text-red-500",
+	},
+	{
+		icon: Sparkles,
+		title: "Suggestions That Don't Feel Forced",
+		body: "The app learns what you like over time, not in a pushy way, just enough to show you things you might enjoy. Especially useful if you're exploring the best food spots in Wayanad and don't know where to start.",
+		color: "bg-cyan-500/10 text-cyan-500",
+	},
+	{
+		icon: Compass,
+		title: "Built From the Ground Up",
+		body: 'Pickfoo wasn\'t built in a city office and dropped somewhere. It was built by people who actually use it, order from it, and deliver through it. The entire experience from restaurant selection to delivery routes makes sense for “online food delivery in Wayanad” because it\'s made with real-world use in mind.',
+		color: "bg-yellow-500/10 text-yellow-500",
+	},
+	{
+		icon: Users,
+		title: "Run by People Who Get It",
+		body: "The team behind Pickfoo is small. Several of us are from the places we serve. So when we make decisions about what features to add, which restaurants to bring on board, how to handle deliveries, we're not guessing. We're going by what we know works.",
+		color: "bg-pink-500/10 text-pink-500",
+	},
 ];
 
 export default function FeaturesPage() {
-    return (
-        <>
+	return (
+		<main className="flex-grow pt-32 pb-24">
+			<section className="container-premium max-w-3xl mb-16">
+				<motion.div
+					initial={{ opacity: 0, y: 20 }}
+					animate={{ opacity: 1, y: 0 }}
+					className="inline-block px-4 py-1.5 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-bold uppercase tracking-wider mb-6"
+				>
+					How Pickfoo works
+				</motion.div>
+				<motion.h1
+					initial={{ opacity: 0, y: 20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ delay: 0.1 }}
+					className="text-5xl lg:text-6xl font-bold font-outfit mb-6 leading-[1.1]"
+				>
+					What Pickfoo{" "}
+					<span className="text-primary italic">Actually Does</span>.
+				</motion.h1>
+			</section>
 
-            <main className="flex-grow pt-32 md:pb-20">
-                <div className="max-w-3xl mb-16 container-premium">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="inline-block px-4 py-1.5 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-bold uppercase tracking-wider mb-6"
-                    >
-                        Technology meets Tradition
-                    </motion.div>
-                    <motion.h1
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1 }}
-                        className="text-5xl lg:text-6xl font-bold font-outfit mb-6"
-                    >
-                        Building the Future of <span className="text-primary italic">Hill Delivery</span>.
-                    </motion.h1>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2 }}
-                        className="text-xl text-muted-foreground leading-relaxed"
-                    >
-                        Discover how Pickfoo is transforming food delivery in Mananthavady and across Wayanad with hill-aware routes, live tracking, and a deep focus on local kitchens.
-                    </motion.p>
-                </div>
+			<section className="container-premium">
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					{features.map((feature, index) => (
+						<motion.article
+							key={feature.title}
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
+							transition={{ delay: index * 0.08 }}
+							className="p-8 rounded-[2.5rem] bg-card border border-primary/5 hover:border-primary/20 transition-all hover:shadow-2xl hover:-translate-y-2 group"
+						>
+							<div
+								className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 ${feature.color} group-hover:scale-110 transition-transform`}
+							>
+								<feature.icon className="w-8 h-8" />
+							</div>
+							<h2 className="text-2xl font-bold font-outfit mb-4 group-hover:text-primary transition-colors">
+								{feature.title}
+							</h2>
+							<p className="text-muted-foreground leading-relaxed">
+								{feature.body}
+							</p>
+						</motion.article>
+					))}
+				</div>
+			</section>
 
-                <div className="grid grid-cols-1 container-premium md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {features.map((feature, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            className="p-8 rounded-[2.5rem] bg-card border border-primary/5 hover:border-primary/20 transition-all hover:shadow-2xl hover:-translate-y-2 group"
-                        >
-                            <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 ${feature.color} group-hover:scale-110 transition-transform`}>
-                                {feature.icon}
-                            </div>
-                            <h3 className="text-2xl font-bold font-outfit mb-4 group-hover:text-primary transition-colors">{feature.title}</h3>
-                            <p className="text-muted-foreground leading-relaxed">
-                                {feature.description}
-                            </p>
-                            <div className="mt-8 flex items-center text-primary font-bold opacity-0 group-hover:opacity-100 transition-opacity">
-                                Learn more <ChevronRight className="ml-2 w-4 h-4" />
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
-
-                <section className="container-premium mt-16 max-w-4xl">
-                    <h2 className="text-3xl font-bold font-outfit mb-4">Built for Mananthavady roads, not metro assumptions</h2>
-                    <p className="text-muted-foreground leading-relaxed mb-4">
-                        Delivery in Wayanad is different from Kochi or Bengaluru. Seasonal monsoon delays, estate roads, and dispersed neighbourhoods need routing that respects the map on the ground. Pickfoo&apos;s product is designed around that reality: clear ETAs, partner kitchens verified for quality, and last-mile reach beyond the main bazaar road.
-                    </p>
-                    <p className="text-muted-foreground leading-relaxed">
-                        For diners, that means one app to browse local restaurants. For merchants, it means orders, payouts, and support without building your own rider fleet from scratch.
-                    </p>
-                </section>
-
-                {/* Integration Section */}
-                <section className="pt-8 mt-16 container-premium bg-primary md:bg-transparent">
-                    <div className="relative bg-primary md:rounded-[3rem] text-primary-foreground overflow-hidden">
-                        <div className="relative z-10 grid grid-cols-1 py-8 md:p-8 lg:p-16 lg:grid-cols-2 gap-12 items-center">
-                            <div>
-                                <h2 className="text-4xl font-bold font-outfit mb-6">Designed for the Community.</h2>
-                                <p className="text-lg opacity-90 mb-8 leading-relaxed">
-                                    Pickfoo isn&apos;t just an app; it&apos;s an ecosystem for Mananthavady — supporting local kitchens, fair partner payouts, and delivery work that stays in the hills.
-                                </p>
-                                <div className="flex flex-wrap gap-8">
-                                    <div className="flex items-center space-x-3">
-                                        <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                                            <Users className="w-6 h-6" />
-                                        </div>
-                                        <div>
-                                            <p className="text-2xl font-bold">Local-first</p>
-                                            <p className="text-sm opacity-70">Launch market: Mananthavady</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex items-center space-x-3">
-                                        <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                                            <TrendingUp className="w-6 h-6" />
-                                        </div>
-                                        <div>
-                                            <p className="text-2xl font-bold">Partner-ready</p>
-                                            <p className="text-sm opacity-70">Restaurants &amp; riders welcome</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20">
-                                <blockquote className="text-2xl font-medium italic mb-6">
-                                    &ldquo;Finally, a delivery platform that understands Mananthavady — not just the highway towns. Local kitchens deserve the same tools metros take for granted.&rdquo;
-                                </blockquote>
-                                <div className="flex items-center space-x-4">
-                                    <div className="w-12 h-12 rounded-full bg-secondary"></div>
-                                    <div>
-                                        <p className="font-bold text-lg">Launch partner voice</p>
-                                        <p className="text-sm opacity-70">Restaurant owner, Mananthavady</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </main>
-
-        </>
-    );
+			<section id="faq" className="container-premium max-w-3xl pt-24 scroll-mt-28">
+				<h2 className="text-3xl md:text-4xl font-bold font-outfit mb-8 text-center text-primary">
+					Frequently Asked Questions
+				</h2>
+				<FaqAccordion faqs={customerFaqs} />
+			</section>
+		</main>
+	);
 }

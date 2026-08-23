@@ -1,17 +1,15 @@
-import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { ContactEmail } from "@/components/ContactEmail";
 import { AppDownloadButtons } from "@/components/AppDownloadButtons";
 import { SOCIAL_PROFILES } from "@/lib/seo";
 
 const socialLinks = [
-	{ key: "facebook" as const, href: SOCIAL_PROFILES.facebook, Icon: Facebook, label: "Facebook" },
-	{ key: "instagram" as const, href: SOCIAL_PROFILES.instagram, Icon: Instagram, label: "Instagram" },
-	{ key: "twitter" as const, href: SOCIAL_PROFILES.twitter, Icon: Twitter, label: "X (Twitter)" },
-	{ key: "linkedin" as const, href: SOCIAL_PROFILES.linkedin, Icon: Linkedin, label: "LinkedIn" },
-	{ key: "youtube" as const, href: SOCIAL_PROFILES.youtube, Icon: Youtube, label: "YouTube" },
-].filter((item) => Boolean(item.href));
+	{ href: SOCIAL_PROFILES.instagram, Icon: Instagram, label: "Instagram" },
+	{ href: SOCIAL_PROFILES.facebook, Icon: Facebook, label: "Facebook" },
+	{ href: SOCIAL_PROFILES.linkedin, Icon: Linkedin, label: "LinkedIn" },
+	{ href: SOCIAL_PROFILES.youtube, Icon: Youtube, label: "YouTube" },
+];
 
 export function Footer() {
 	return (
@@ -29,25 +27,27 @@ export function Footer() {
 							/>
 						</Link>
 						<p className="text-muted-foreground leading-relaxed">
-							Hyperlocal food delivery for Mananthavady and Wayanad — fast, fresh, and local.
+						Online food delivery for Wayanad. One app, every restaurant, no more calling around.
 						</p>
 						<AppDownloadButtons size="compact" />
-						{socialLinks.length > 0 && (
-							<div className="flex space-x-4">
-								{socialLinks.map(({ href, Icon, label }) => (
+						<div className="flex space-x-4">
+							{socialLinks.map(({ href, Icon, label }) => {
+								const isLive = Boolean(href);
+								return (
 									<a
 										key={label}
-										href={href}
-										target="_blank"
-										rel="noopener noreferrer"
+										href={isLive ? href : "#"}
+										{...(isLive
+											? { target: "_blank", rel: "noopener noreferrer" }
+											: undefined)}
 										aria-label={label}
 										className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all"
 									>
 										<Icon className="w-5 h-5" />
 									</a>
-								))}
-							</div>
-						)}
+								);
+							})}
+						</div>
 					</div>
 
 					<div>
@@ -71,7 +71,7 @@ export function Footer() {
 									href="/wayanad"
 									className="text-muted-foreground hover:text-primary transition-colors"
 								>
-									Wayanad Special
+									Wayanad
 								</Link>
 							</li>
 							<li>
@@ -84,18 +84,26 @@ export function Footer() {
 							</li>
 							<li>
 								<Link
-									href="/solutions"
+									href="/about"
 									className="text-muted-foreground hover:text-primary transition-colors"
 								>
-									Our Solutions
+									About Us
 								</Link>
 							</li>
 							<li>
 								<Link
-									href="/about"
+									href="/blog"
 									className="text-muted-foreground hover:text-primary transition-colors"
 								>
-									About
+									Blog
+								</Link>
+							</li>
+							<li>
+								<Link
+									href="/contact"
+									className="text-muted-foreground hover:text-primary transition-colors"
+								>
+									Contact Us
 								</Link>
 							</li>
 						</ul>
@@ -121,14 +129,6 @@ export function Footer() {
 								</Link>
 							</li>
 							<li>
-								<Link
-									href="/solutions"
-									className="text-muted-foreground hover:text-primary transition-colors"
-								>
-									Merchant Solutions
-								</Link>
-							</li>
-							<li>
 								<a
 									href="https://restaurant.pickfoo.in/"
 									target="_blank"
@@ -144,14 +144,6 @@ export function Footer() {
 					<div>
 						<h4 className="text-lg font-bold font-outfit mb-6">Support</h4>
 						<ul className="space-y-4">
-							<li>
-								<Link
-									href="/faq"
-									className="text-muted-foreground hover:text-primary transition-colors"
-								>
-									FAQ
-								</Link>
-							</li>
 							<li>
 								<Link
 									href="/support"
@@ -209,10 +201,12 @@ export function Footer() {
 								</Link>
 							</li>
 							<li>
-								<ContactEmail label="Contact Us" />
-							</li>
-							<li>
-								<ContactEmail showAddress className="font-semibold" />
+								<Link
+									href="/contact"
+									className="text-muted-foreground hover:text-primary transition-colors"
+								>
+									Contact Us
+								</Link>
 							</li>
 						</ul>
 					</div>

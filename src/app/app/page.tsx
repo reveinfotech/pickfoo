@@ -12,9 +12,9 @@ import {
 
 export const metadata: Metadata = {
 	...buildPageMetadata({
-		title: "Download Pickfoo App | Mananthavady Food Delivery",
+		title: "Download Pickfoo | online delivery in wayanad",
 		description:
-			"Get the Pickfoo customer app for iOS or Android. Scan the QR or tap to open the App Store or Google Play for food delivery in Mananthavady.",
+			"Get online food delivery in Mananthavady and Wayanad, right from your phone. Browse restaurants, track your order live, and pay your way, download Pickfoo today.",
 		path: "/app",
 	}),
 	robots: { index: true, follow: true },
@@ -47,11 +47,11 @@ export default async function AppDownloadPage() {
 					Get the app
 				</p>
 				<h1 className="text-4xl md:text-5xl font-bold font-outfit">
-					Download <span className="text-primary italic">Pickfoo</span>
+					Download <span className="text-primary italic">Pickfoo</span> | Online
+					 Food Delivery in <span className="text-primary italic">wayanad</span>
 				</h1>
 				<p className="text-muted-foreground text-lg leading-relaxed max-w-xl mx-auto">
-					Order from local Mananthavady restaurants on iOS or Android. On a phone,
-					this page opens the right store automatically — or scan the QR code below.
+					Get online food delivery in Mananthavady and Wayanad, right from your phone. Browse restaurants, track your order live, and pay your way, download Pickfoo today.
 				</p>
 
 				<div className="flex justify-center pt-2">
@@ -66,16 +66,6 @@ export default async function AppDownloadPage() {
 						/>
 					</div>
 				</div>
-
-				<p className="text-sm text-muted-foreground">
-					Scan with your phone camera ·{" "}
-					<a
-						href={APP_DOWNLOAD_URL}
-						className="text-primary font-medium underline underline-offset-2 hover:no-underline"
-					>
-						pickfoo.in/app
-					</a>
-				</p>
 
 				<div className="flex justify-center pt-4">
 					<AppDownloadButtons />

@@ -22,12 +22,11 @@ Pickfoo is not related to the US company "PickFu".
 
 - [Home](https://www.pickfoo.in/): Overview of Pickfoo food delivery
 - [Mananthavady](https://www.pickfoo.in/mananthavady): Launch market page — food delivery in Mananthavady
-- [Wayanad](https://www.pickfoo.in/wayanad): Local flavours, dishes, and Wayanad food culture
-- [Features](https://www.pickfoo.in/features): Delivery technology and product features
-- [Solutions](https://www.pickfoo.in/solutions): Tools for restaurant merchants
+- [Wayanad](https://www.pickfoo.in/wayanad): Online food delivery in Wayanad, starting in Mananthavady
+- [Features](https://www.pickfoo.in/features): What Pickfoo actually does — tracking, restaurants, delivery beyond town, and FAQs
 - [Join](https://www.pickfoo.in/join): Restaurant and delivery partner signup
-- [About](https://www.pickfoo.in/about): Company identity and E-E-A-T
-- [FAQ](https://www.pickfoo.in/faq): Customer questions and direct answers
+- [About](https://www.pickfoo.in/about): From Mananthavady, For Everyone — our story and where we're headed
+- [Contact](https://www.pickfoo.in/contact): Contact Pickfoo — email, location, and partnership enquiries
 - [Download app](https://www.pickfoo.in/app): Smart link / QR — opens App Store or Google Play by device
 - [Support](https://www.pickfoo.in/support): Help and contact
 - [Privacy](https://www.pickfoo.in/privacy): Privacy Policy

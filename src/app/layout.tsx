@@ -3,6 +3,7 @@ import { Outfit, Inter } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import Script from "next/script";
 import {
 	BRAND_NAME,
@@ -87,6 +88,7 @@ export default function RootLayout({
 					<Navbar />
 					<main className="grow">{children}</main>
 					<Footer />
+					<ScrollToTop />
 				</div>
 			</body>
 		</html>

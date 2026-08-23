@@ -1,174 +1,185 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
-import { Coffee, Trees, Sprout, Wind } from "lucide-react";
+import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
+import { FaqAccordion } from "@/components/FaqAccordion";
+import { Button } from "@/components/ui/button";
+import { faqPageSchema } from "@/lib/seo";
+import { ArrowRight } from "lucide-react";
+import { HeroBackground } from "./HeroBackground";
 
-const specialties = [
-    {
-        title: "Bamboo Rice",
-        desc: "A rare and nutritious grain harvested from flowering bamboo groves in the deep forests.",
-        icon: <Trees className="w-6 h-6" />
-    },
-    {
-        title: "Highland Coffee",
-        desc: "Single-origin Arabica and Robusta beans grown under the shade of massive jungle trees.",
-        icon: <Coffee className="w-6 h-6" />
-    },
-    {
-        title: "Pure Spices",
-        desc: "The world's finest Black Pepper, Cardamom, and Ginger, sourced from the ancient hills.",
-        icon: <Sprout className="w-6 h-6" />
-    },
-    {
-        title: "Hill Honey",
-        desc: "Wild honey collected by tribal communities from the heights of the Western Ghats.",
-        icon: <Wind className="w-6 h-6" />
-    }
+const localFaqs = [
+	{
+		question: "What is Wayanad famous for when it comes to food?",
+		answer:
+			"Wayanad's food culture comes from what grows in the hills around it, estate produce, home-style cooking, and restaurants that have been serving this district for years. It's less about any one dish and more about how deeply the food here is tied to the land.",
+	},
+	{
+		question: "Where can I get Wayanad special food delivered?",
+		answer:
+			"Pickfoo connects you to restaurants across Wayanad serving the kind of food this district is known for, starting in Mananthavady and growing from there.",
+	},
+	{
+		question: "Does Pickfoo offer home delivery in Wayanad?",
+		answer:
+			"Yes, starting from Mananthavady and reaching about 25 km around it, with plans to expand further across Wayanad over time.",
+	},
+	{
+		question: "What are the best food spots in Wayanad?",
+		answer:
+			"They're the kind of places usually found through word of mouth. Pickfoo's restaurant list is our attempt at gathering the ones actually worth ordering from, all in one app.",
+	},
+	{
+		question: "Which are the best restaurants in Wayanad on Pickfoo?",
+		answer:
+			"The current list is centered on Mananthavady and nearby areas. You'll find the full, up-to-date selection inside the app.",
+	},
+	{
+		question: "Is online food delivery available across all of Wayanad?",
+		answer:
+			"Not yet across the whole district. Pickfoo launched in Mananthavady and currently covers about 25 km around it. Wider Wayanad coverage is the next stage of our growth.",
+	},
 ];
 
 export default function WayanadPage() {
-    return (
-        <>
-            <main className="flex-grow">
-                {/* Immersive Hero */}
-                <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
-                    <div className="absolute inset-0 z-0">
-                        <div className="absolute inset-0 bg-black/40 z-10"></div>
-                        <motion.div
-                            initial={{ scale: 1.1 }}
-                            animate={{ scale: 1 }}
-                            transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
-                            className="w-full h-full bg-[url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=2000')] bg-cover bg-center"
-                        ></motion.div>
-                    </div>
+	return (
+		<>
+			<JsonLd data={faqPageSchema(localFaqs)} />
+			<section className="relative h-[80vh] flex items-center overflow-hidden">
+				<HeroBackground />
+				<div className="container-premium relative z-20 max-w-4xl pt-20">
+					<h1 className="text-4xl md:text-6xl font-bold font-outfit mb-6 leading-tight text-white">
+						Online Food Delivery in{" "}
+						<span className="text-primary italic">Wayanad</span>
+					</h1>
+					<p className="text-xl text-white/80 leading-relaxed">
+						Wayanad isn&apos;t just known for its hills and greenery, it has a
+						food culture that&apos;s been shaped by this land for generations.
+						Pickfoo brings that to your door, with online food delivery in
+						Wayanad starting right here in Mananthavady.
+					</p>
+				</div>
+				<div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10" />
+			</section>
 
-                    <div className="container-premium relative z-20 text-center">
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            className="inline-block px-4 py-1.5 bg-primary/20 backdrop-blur-md border border-white/20 rounded-full text-white text-sm font-bold uppercase tracking-widest mb-6"
-                        >
-                            The Heart of the Western Ghats
-                        </motion.div>
-                        <motion.h1
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.1 }}
-                            className="text-6xl lg:text-8xl font-bold font-outfit text-white mb-8"
-                        >
-                            Wayanad <span className="text-primary">Special</span>
-                        </motion.h1>
-                        <motion.p
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.2 }}
-                            className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed"
-                        >
-                            Beyond landscapes, Wayanad is a flavour — ancient tribal wisdom, estate produce, and home kitchens. Pickfoo brings that story to your plate in Mananthavady and across the district.
-                        </motion.p>
-                    </div>
+			<div className="pt-20 pb-20">
 
-                    <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10"></div>
-                </section>
+				<section className="container-premium mb-20">
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+						<div>
+							<h2 className="text-3xl font-bold font-outfit mb-4 text-primary">
+								A Place That Cooks Differently
+							</h2>
+							<p className="text-muted-foreground leading-relaxed mb-4">
+								Ask anyone who&apos;s grown up here and they&apos;ll tell you,
+								the food in Wayanad tastes the way it does because of what
+								grows around it. Estate-grown spices, hill produce, recipes
+								that have been passed down rather than looked up. Restaurants
+								across the district cook with what&apos;s actually available
+								here, not what&apos;s convenient to ship in.
+							</p>
+							<p className="text-muted-foreground leading-relaxed">
+								That&apos;s the part Pickfoo is trying to get right, not just
+								delivering food, but making it easy to actually reach the
+								restaurants doing this well, wherever they happen to be in
+								town.
+							</p>
+						</div>
+						<div className="relative aspect-[4/3] rounded-[2rem] overflow-hidden">
+							<Image
+								src="/images/fresh.png"
+								alt="Fresh Wayanad spices and hill produce in a wooden basket"
+								fill
+								className="object-cover"
+								sizes="(max-width: 1024px) 100vw, 50vw"
+							/>
+						</div>
+					</div>
+				</section>
 
-                {/* Culture Section */}
-                <section className="py-24">
-                    <div className="container-premium">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-stretch">
-                            <motion.div
-                                initial={{ opacity: 0, x: -30 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                className="space-y-8 flex flex-col justify-center"
-                            >
-                                <h2 className="text-4xl lg:text-5xl font-bold font-outfit leading-tight">
-                                    Taste the <span className="text-primary italic">Wilderness</span> in every bite.
-                                </h2>
-                                <p className="text-muted-foreground leading-relaxed">
-                                    From Mananthavady bazaar kitchens to estate cafés, Wayanad cooks with what the Western Ghats give: pepper vines, bamboo groves that flower into rice, shade-grown coffee, and wild honey gathered by tribal communities. These are not marketing buzzwords — they are ingredients you can order through Pickfoo when partner restaurants put them on the menu.
-                                </p>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                    {specialties.map((item, i) => (
-                                        <div key={i} className="p-6 bg-secondary/30 rounded-3xl border border-primary/5">
-                                            <div className="text-primary mb-4">{item.icon}</div>
-                                            <h4 className="text-xl font-bold mb-2">{item.title}</h4>
-                                            <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
-                                        </div>
-                                    ))}
-                                </div>
-                            </motion.div>
+				<section className="container-premium mb-20">
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+						<div className="relative aspect-[4/3] rounded-[2rem] overflow-hidden order-2 lg:order-1">
+							<Image
+								src="/images/hero-fastfood.png"
+								alt="A meal looking out over the hills of Wayanad"
+								fill
+								className="object-cover"
+								sizes="(max-width: 1024px) 100vw, 50vw"
+							/>
+						</div>
+						<div className="order-1 lg:order-2">
+							<h2 className="text-3xl font-bold font-outfit mb-4 text-primary">
+								Where to Actually Eat Well in Wayanad
+							</h2>
+							<p className="text-muted-foreground leading-relaxed mb-4">
+								If you&apos;ve ever asked someone &ldquo;where&apos;s good to
+								eat around here,&rdquo; you know the answer usually comes from
+								a person, not an app, a cousin, a neighbour, someone who&apos;s
+								actually tried the place. Pickfoo is trying to be that, just
+								in an app: some of the best restaurants in Wayanad and the
+								food spots people here actually rate, gathered in one place
+								instead of scattered across word of mouth.
+							</p>
+							<p className="text-muted-foreground leading-relaxed">
+								We&apos;re starting in Mananthavady, where we know the
+								restaurants and the streets well enough to get it right,
+								before spreading further out.
+							</p>
+						</div>
+					</div>
+				</section>
 
-                            <motion.div
-                                initial={{ opacity: 0, x: 30 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                className="relative w-full h-full min-h-[400px] rounded-[4rem] overflow-hidden shadow-2xl"
-                            >
-                                <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent z-10"></div>
-                                <Image
-                                    src="https://images.unsplash.com/photo-1509358271058-acd22cc93898?q=80&w=800"
-                                    alt="Wayanad Spices"
-                                    fill
-                                    className="object-cover"
-                                    sizes="(max-width: 768px) 100vw, 50vw"
-                                />
-                            </motion.div>
-                        </div>
-                    </div>
-                </section>
+				<section className="container-premium mb-20">
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+						<div>
+							<h2 className="text-3xl font-bold font-outfit mb-4 text-primary">
+								Home Delivery in Wayanad, Done Properly
+							</h2>
+							<p className="text-muted-foreground leading-relaxed mb-4">
+								Wayanad&apos;s food has always been worth seeking out, getting
+								it delivered has been the hard part. Pickfoo is building
+								toward home delivery in Wayanad that actually works here: real
+								restaurant listings, order tracking you can see, and no need
+								to memorize ten different phone numbers just to eat well.
+							</p>
+							<p className="text-muted-foreground leading-relaxed mb-6">
+								Right now, that means a growing list of restaurants reachable
+								through Pickfoo starting from Mananthavady, with delivery
+								reaching roughly 25 km around town. As more restaurants and
+								delivery partners join, that range keeps expanding across the
+								district.
+							</p>
+							<div className="border-l-2 border-primary pl-5 py-1">
+								<p className="text-foreground leading-relaxed mb-4 text-primary">
+									Looking for delivery in Mananthavady itself?
+								</p>
+								<Button asChild size="lg" className="rounded-full h-12 px-8 font-bold">
+									<Link href="/app">
+										Download the App Now
+										<ArrowRight className="ml-2 w-4 h-4" />
+									</Link>
+								</Button>
+							</div>
+						</div>
+						<div className="relative aspect-[4/3] rounded-[2rem] overflow-hidden">
+							<Image
+								src="/images/delivery.png"
+								alt="A Pickfoo delivery partner riding through Wayanad"
+								fill
+								className="object-cover"
+								sizes="(max-width: 1024px) 100vw, 50vw"
+							/>
+						</div>
+					</div>
+				</section>
 
-                {/* Food Journey */}
-                <section className="py-24 bg-secondary text-white overflow-hidden">
-                    <div className="container-premium">
-                        <div className="text-center max-w-3xl mx-auto mb-20">
-                            <h2 className="text-4xl lg:text-5xl font-bold font-outfit mb-6">A Journey through Local Kitchens</h2>
-                            <p className="text-lg text-white/60">From legendary fish curry and Malabar biriyani to puttu breakfasts and bamboo rice payasam — Pickfoo connects you to authentic hill cooking, starting with our Mananthavady launch market.</p>
-                        </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            {[
-                                { name: "Malabar Biriyani", img: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=600" },
-                                { name: "Traditional Puttu", img: "https://images.unsplash.com/photo-1630383249896-424e482df921?q=80&w=600" },
-                                { name: "Bamboo Rice Payasam", img: "https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?q=80&w=600" },
-                                { name: "Wayanad Coffee", img: "https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=600" }
-                            ].map((food, i) => (
-                                <motion.div
-                                    key={i}
-                                    whileHover={{ y: -10 }}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: i * 0.1 }}
-                                    className="aspect-[4/5] rounded-[2.5rem] bg-white/5 border border-white/10 overflow-hidden relative group"
-                                >
-                                    <Image
-                                        src={food.img}
-                                        alt={food.name}
-                                        fill
-                                        className="object-cover opacity-60 group-hover:scale-110 transition-transform duration-700"
-                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                                    />
-                                    <div className="absolute bottom-0 left-0 right-0 p-6 pt-20 bg-gradient-to-t from-black to-transparent">
-                                        <h4 className="text-xl font-bold font-outfit">{food.name}</h4>
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
-
-                        <div className="mt-16 max-w-2xl mx-auto text-center space-y-4">
-                            <p className="text-white/70 leading-relaxed">
-                                Looking for delivery in the launch town itself? Visit our dedicated{" "}
-                                <a href="/mananthavady" className="text-primary font-semibold underline underline-offset-2 hover:no-underline">
-                                    Mananthavady food delivery page
-                                </a>{" "}
-                                for neighbourhood context, how Pickfoo compares to WhatsApp orders, and customer FAQs.
-                            </p>
-                        </div>
-                    </div>
-                </section>
-            </main>
-
-        </>
-    );
+				<section className="container-premium max-w-3xl">
+					<h2 className="text-3xl md:text-4xl font-bold font-outfit mb-8 text-center text-primary">
+						Frequently Asked Questions
+					</h2>
+					<FaqAccordion faqs={localFaqs} />
+				</section>
+			</div>
+		</>
+	);
 }

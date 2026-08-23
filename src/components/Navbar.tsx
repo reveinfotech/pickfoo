@@ -13,12 +13,11 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
     { name: "Home", href: "/" },
-    { name: "Mananthavady", href: "/mananthavady" },
-    { name: "Wayanad", href: "/wayanad" },
+    { name: "About", href: "/about" },
     { name: "Features", href: "/features" },
-    { name: "Solutions", href: "/solutions" },
+    { name: "Blog", href: "/blog" },
     { name: "Join Us", href: "/join" },
-    { name: "FAQ", href: "/faq" },
+    { name: "Contact Us", href: "/contact" },
 ];
 
 export function Navbar() {
@@ -59,7 +58,7 @@ export function Navbar() {
                 </Link>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden lg:flex items-center space-x-5 xl:space-x-7">
+                <nav className="hidden lg:flex items-center space-x-4 xl:space-x-6">
                     {navItems.map((item) => (
                         <Link
                             key={item.href}
@@ -73,7 +72,7 @@ export function Navbar() {
                         </Link>
                     ))}
                     <Button asChild className="font-semibold px-6 rounded-full">
-                        <Link href="/#download">Download App</Link>
+                        <Link href="/app">Download App</Link>
                     </Button>
                 </nav>
 
@@ -123,8 +122,7 @@ export function Navbar() {
                                     </motion.div>
                                 </nav>
 
-                                <div className="absolute bottom-10 left-0 right-0 text-center text-muted-foreground text-sm space-y-2">
-                                    <Link href="/about" onClick={() => setIsOpen(false)} className="block hover:text-primary">About</Link>
+                                <div className="absolute bottom-10 left-0 right-0 text-center text-muted-foreground text-sm">
                                     <p>© {new Date().getFullYear()} Pickfoo Mananthavady.</p>
                                 </div>
                             </div>
