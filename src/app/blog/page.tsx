@@ -44,7 +44,7 @@ export default async function BlogPage({
 								href={`/blog/${post.slug}`}
 								className="group flex flex-col rounded-3xl overflow-hidden bg-secondary/30 border-2 border-transparent hover:border-primary transition-all hover:-translate-y-1"
 							>
-								<div className="relative aspect-[16/10] bg-secondary/50">
+								<div className="relative aspect-16/10 bg-secondary/50">
 									{post.coverImageUrl ? (
 										<Image
 											src={post.coverImageUrl}

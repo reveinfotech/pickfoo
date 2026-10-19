@@ -9,7 +9,6 @@ import {
   ArrowRight,
   Bell,
   Compass,
-  Heart,
   MapPin,
   Package,
   ShoppingBag,
@@ -197,7 +196,7 @@ export default function HomeContent({ stats }: { stats: HomeStats }) {
 
   return (
     <>
-      <main className="flex-grow">
+      <main className="grow">
         {/* Hero */}
         <section className="relative min-h-screen overflow-hidden bg-background">
           <Image
@@ -209,7 +208,7 @@ export default function HomeContent({ stats }: { stats: HomeStats }) {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/75 to-background" />
+          <div className="absolute inset-0 bg-linear-to-b from-background/85 via-background/75 to-background" />
 
           <div className="relative z-10 min-h-screen flex items-center pt-20">
             <div className="container-premium w-full py-16 md:py-24">
@@ -374,7 +373,7 @@ export default function HomeContent({ stats }: { stats: HomeStats }) {
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-black/25 to-transparent"></div>
                 </div>
               </motion.div>
             </div>
@@ -435,7 +434,7 @@ export default function HomeContent({ stats }: { stats: HomeStats }) {
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-primary/40 to-transparent"></div>
                 </div>
               </motion.div>
 

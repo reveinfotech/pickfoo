@@ -108,7 +108,7 @@ export default async function BlogPostPage({ params }: Props) {
 
 			{post.coverImageUrl ? (
 				<div className="container-premium max-w-5xl mb-12">
-					<div className="relative aspect-[16/9] rounded-[2rem] overflow-hidden">
+					<div className="relative aspect-video rounded-4xl overflow-hidden">
 						<Image
 							src={post.coverImageUrl}
 							alt={post.coverImageAlt || post.title}

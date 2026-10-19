@@ -132,6 +132,6 @@
 
 @layer utilities {
   .container-premium {
-    @apply w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20;
+    @apply w-full max-w-350 mx-auto px-6 md:px-12 lg:px-20;
   }
 }
