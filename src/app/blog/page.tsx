@@ -56,11 +56,6 @@ export default async function BlogPage({
 									) : null}
 								</div>
 								<div className="flex flex-col flex-1 p-6">
-									{post.tags.length ? (
-										<p className="text-xs font-bold uppercase tracking-wider text-primary mb-3">
-											{post.tags.slice(0, 2).join(" · ")}
-										</p>
-									) : null}
 									<h2 className="text-xl font-bold font-outfit mb-3 group-hover:text-primary transition-colors">
 										{post.title}
 									</h2>

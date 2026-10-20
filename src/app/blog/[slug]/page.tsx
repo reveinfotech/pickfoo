@@ -8,6 +8,7 @@ import { ArrowLeft } from "lucide-react";
 import { JsonLd } from "@/components/JsonLd";
 import { getBlogPost, getBlogPosts } from "@/lib/api";
 import { BRAND_NAME, LEGAL_NAME, SITE_URL, absoluteUrl } from "@/lib/seo";
+import { normalizePostMarkdown } from "@/lib/markdown";
 import { formatPostDate } from "../format";
 
 export const revalidate = 60;
@@ -34,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	return {
 		title,
 		description,
+		keywords: post.tags,
 		alternates: { canonical: url },
 		openGraph: {
 			title,
@@ -92,11 +94,6 @@ export default async function BlogPostPage({ params }: Props) {
 					Back to the journal
 				</Link>
 
-				{post.tags.length ? (
-					<p className="text-sm font-bold uppercase tracking-wider text-primary mb-4">
-						{post.tags.join(" · ")}
-					</p>
-				) : null}
 				<h1 className="text-4xl md:text-5xl font-bold font-outfit leading-tight mb-6">
 					{post.title}
 				</h1>
@@ -122,8 +119,10 @@ export default async function BlogPostPage({ params }: Props) {
 			) : null}
 
 			<div className="container-premium max-w-3xl">
-				<div className="prose prose-lg prose-invert max-w-none prose-headings:font-outfit prose-a:text-primary prose-img:rounded-2xl">
-					<ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
+				<div className="prose prose-lg prose-invert max-w-none prose-headings:font-outfit prose-p:text-foreground/85 prose-li:text-foreground/85 prose-strong:text-current prose-a:text-primary prose-img:rounded-2xl">
+					<ReactMarkdown remarkPlugins={[remarkGfm]}>
+						{normalizePostMarkdown(post.content)}
+					</ReactMarkdown>
 				</div>
 			</div>
 		</article>
