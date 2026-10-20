@@ -23,7 +23,9 @@ export type BlogPostSummary = {
 	updatedAt?: string;
 };
 
-export type BlogPost = BlogPostSummary & { content: string };
+export type BlogFaq = { question: string; answer: string };
+
+export type BlogPost = BlogPostSummary & { content: string; faqs?: BlogFaq[] };
 
 export type BlogPostPage = {
 	data: BlogPostSummary[];
