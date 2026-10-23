@@ -137,8 +137,17 @@ export default async function BlogPostPage({ params }: Props) {
 								</div>
 							) : null}
 
-							<div className="prose prose-invert max-w-none prose-headings:font-outfit prose-p:text-foreground/85 prose-li:text-foreground/85 prose-strong:text-current prose-a:text-primary prose-img:rounded-2xl">
-								<ReactMarkdown remarkPlugins={[remarkGfm]}>
+							<div className="prose prose-invert max-w-none prose-headings:font-outfit prose-p:text-foreground/85 prose-li:text-foreground/85 prose-strong:text-current prose-a:text-primary prose-img:rounded-2xl prose-table:my-0 prose-th:bg-secondary/50 prose-th:px-4 prose-th:py-3 prose-td:px-4 prose-td:py-3 prose-td:text-foreground/85">
+								<ReactMarkdown
+									remarkPlugins={[remarkGfm]}
+									components={{
+										table: (props) => (
+											<div className="my-8 overflow-x-auto rounded-2xl border border-border">
+												<table {...props} />
+											</div>
+										),
+									}}
+								>
 									{normalizePostMarkdown(post.content)}
 								</ReactMarkdown>
 							</div>
